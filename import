@@ -1,0 +1,13 @@
+CREATE DATABASE temperature_db
+# DML
+# CONTEXT-DATABASE: temperature_db
+temperature,sensor_id=05 temperature=35 1550355774993
+temperature,sensor_id=02 temperature=41 1572268453941
+temperature,sensor_id=07 temperature=42 1563426490860
+temperature,sensor_id=05 temperature=24 1557041269964
+temperature,sensor_id=08 temperature=39 1575478776144
+temperature,sensor_id=02 temperature=64 1551855839902
+temperature,sensor_id=10 temperature=47 1561495827186
+temperature,sensor_id=06 temperature=77 1553051410451
+temperature,sensor_id=05 temperature=31 1549360560167
+temperature,sensor_id=01 temperature=37 1559658593931
