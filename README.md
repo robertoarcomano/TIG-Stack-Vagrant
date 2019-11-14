@@ -4,6 +4,7 @@ How to create a TIG (Telegraf, InfluxDB,Grafana) Stack using Vagrant
 ## After launching install.sh you have to:
 1. Connect to Grafana using admin/admin
 2. Add influxdb data source with
+```
   Name: influxdb
   Type: influxdb
   URL: http://localhost:8086/
@@ -11,6 +12,7 @@ How to create a TIG (Telegraf, InfluxDB,Grafana) Stack using Vagrant
   User: telegraf
   Password: 'password'
   Then save and exit
+```
 3. Click "+" botton on the left and click "import", then specify 5955, hit tab and specify influxdb data source
 
 ## 1. Main script <a href=TIG_Stack.sh>TIG_Stack.sh</a>
