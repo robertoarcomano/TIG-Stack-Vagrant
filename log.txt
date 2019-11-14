@@ -1,544 +1,997 @@
-START:  Thu 14 Nov 15:41:07 GMT 2019
-==> default: Removing domain...
-Bringing machine 'default' up with 'libvirt' provider...
-==> default: Checking if box 'generic/ubuntu1804' version '1.9.38' is up to date...
-==> default: Creating image (snapshot of base box volume).
-==> default: Creating domain with the following settings...
-==> default:  -- Name:              TIG-Stack-Vagrant_default
-==> default:  -- Domain type:       kvm
-==> default:  -- Cpus:              4
-==> default:  -- Feature:           acpi
-==> default:  -- Feature:           apic
-==> default:  -- Feature:           pae
-==> default:  -- Memory:            8192M
-==> default:  -- Management MAC:    
-==> default:  -- Loader:            
-==> default:  -- Nvram:             
-==> default:  -- Base box:          generic/ubuntu1804
-==> default:  -- Storage pool:      default
-==> default:  -- Image:             /var/lib/libvirt/images/TIG-Stack-Vagrant_default.img (32G)
-==> default:  -- Volume Cache:      default
-==> default:  -- Kernel:            
-==> default:  -- Initrd:            
-==> default:  -- Graphics Type:     vnc
-==> default:  -- Graphics Port:     -1
-==> default:  -- Graphics IP:       127.0.0.1
-==> default:  -- Graphics Password: Not defined
-==> default:  -- Video Type:        cirrus
-==> default:  -- Video VRAM:        256
-==> default:  -- Sound Type:	
-==> default:  -- Keymap:            en-us
-==> default:  -- TPM Path:          
-==> default:  -- INPUT:             type=mouse, bus=ps2
-==> default: Pruning invalid NFS exports. Administrator privileges will be required...
-==> default: Creating shared folders metadata...
-==> default: Starting domain.
-==> default: Waiting for domain to get an IP address...
-==> default: Waiting for SSH to become available...
-    default: 
-    default: Vagrant insecure key detected. Vagrant will automatically replace
-    default: this with a newly generated keypair for better security.
-    default: 
-    default: Inserting generated public key within guest...
-    default: Removing insecure key from the guest if it's present...
-    default: Key inserted! Disconnecting and reconnecting using new SSH key...
-==> default: Setting hostname...
-==> default: Configuring and enabling network interfaces...
-==> default: Installing NFS client...
-==> default: Exporting NFS shared folders...
-==> default: Preparing to edit /etc/exports. Administrator privileges will be required...
-==> default: Mounting NFS shared folders...
-==> default: Running provisioner: shell...
-    default: Running: /tmp/vagrant-shell20191114-377711-8b94c3.sh
-    default: Reading package lists...
-    default: Building dependency tree...
-    default: 
-    default: Reading state information...
-    default: The following additional packages will be installed:
-    default:   ca-certificates-java fontconfig-config fonts-dejavu-core java-common
-    default:   libasound2 libasound2-data libavahi-client3 libavahi-common-data
-    default:   libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8 libjpeg8 libjq1
-    default:   liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1 libxi6
-    default:   libxrender1 libxtst6 mc-data x11-common
-    default: Suggested packages:
-    default:   default-jre libasound2-plugins alsa-utils cups-common liblcms2-utils pcscd
-    default:   arj catdvi | texlive-binaries dbview djvulibre-bin genisoimage gv
-    default:   imagemagick libaspell-dev links | w3m | lynx odt2txt poppler-utils python
-    default:   python-boto python-tz xpdf | pdf-viewer libnss-mdns fonts-dejavu-extra
-    default:   fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
-    default:   | fonts-wqy-zenhei fonts-indic
-    default: The following NEW packages will be installed:
-    default:   apt-transport-https bats ca-certificates-java fontconfig-config
-    default:   fonts-dejavu-core java-common jq libasound2 libasound2-data libavahi-client3
-    default:   libavahi-common-data libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8
-    default:   libjpeg8 libjq1 liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1
-    default:   libxi6 libxrender1 libxtst6 mc mc-data openjdk-11-jre-headless x11-common
-    default: 0 upgraded, 30 newly installed, 0 to remove and 36 not upgraded.
-    default: Need to get 43.0 MB of archives.
-    default: After this operation, 192 MB of additional disk space will be used.
-    default: Get:1 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libjpeg-turbo8 amd64 1.5.2-0ubuntu5.18.04.3 [110 kB]
-    default: Get:2 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 apt-transport-https all 1.6.12 [1,692 B]
-    default: Get:3 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 bats all 0.4.0-1.1 [14.3 kB]
-    default: Get:4 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 java-common all 0.68ubuntu1~18.04.1 [14.5 kB]
-    default: Get:5 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common-data amd64 0.7-3.1ubuntu1.2 [22.1 kB]
-    default: Get:6 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common3 amd64 0.7-3.1ubuntu1.2 [21.6 kB]
-    default: Get:7 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-client3 amd64 0.7-3.1ubuntu1.2 [25.2 kB]
-    default: Get:8 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcups2 amd64 2.2.7-1ubuntu2.7 [211 kB]
-    default: Get:9 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 liblcms2-2 amd64 2.9-1ubuntu0.1 [139 kB]
-    default: Get:10 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2,194 B]
-    default: Get:11 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fonts-dejavu-core all 2.37-1 [1,041 kB]
-    default: Get:12 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fontconfig-config all 2.12.6-0ubuntu2 [55.8 kB]
-    default: Get:13 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libfontconfig1 amd64 2.12.6-0ubuntu2 [137 kB]
-    default: Get:14 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libnspr4 amd64 2:4.18-1ubuntu1 [112 kB]
-    default: Get:15 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnss3 amd64 2:3.35-2ubuntu2.3 [1,136 kB]
-    default: Get:16 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2-data all 1.1.3-5ubuntu0.2 [36.5 kB]
-    default: Get:17 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2 amd64 1.1.3-5ubuntu0.2 [359 kB]
-    default: Get:18 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libpcsclite1 amd64 1.8.23-1 [21.3 kB]
-    default: Get:19 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxi6 amd64 2:1.7.9-1 [29.2 kB]
-    default: Get:20 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxrender1 amd64 1:0.9.10-1 [18.7 kB]
-    default: Get:21 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 x11-common all 1:7.7+19ubuntu7.1 [22.5 kB]
-    default: Get:22 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxtst6 amd64 2:1.2.3-1 [12.8 kB]
-    default: Get:23 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 openjdk-11-jre-headless amd64 11.0.4+11-1ubuntu2~18.04.3 [37.4 MB]
-    default: Get:24 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ca-certificates-java all 20180516ubuntu1~18.04.1 [12.2 kB]
-    default: Get:25 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libonig4 amd64 6.7.0-1 [119 kB]
-    default: Get:26 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libjq1 amd64 1.5+dfsg-2 [111 kB]
-    default: Get:27 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 jq amd64 1.5+dfsg-2 [45.6 kB]
-    default: Get:28 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libssh2-1 amd64 1.8.0-1 [73.2 kB]
-    default: Get:29 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc-data all 3:4.8.19-1 [1,238 kB]
-    default: Get:30 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc amd64 3:4.8.19-1 [474 kB]
-    default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
-    default: Fetched 43.0 MB in 18s (2,399 kB/s)
-    default: Selecting previously unselected package libjpeg-turbo8:amd64.
-    default: (Reading database ... 
-    default: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%
-    default: (Reading database ... 55%
-    default: (Reading database ... 60%
-    default: (Reading database ... 65%
-    default: (Reading database ... 70%
-    default: (Reading database ... 75%
-    default: (Reading database ... 80%
-    default: (Reading database ... 85%
-    default: (Reading database ... 90%
-    default: (Reading database ... 95%
-    default: (Reading database ... 100%(Reading database ... 105688 files and directories currently installed.)
-    default: Preparing to unpack .../00-libjpeg-turbo8_1.5.2-0ubuntu5.18.04.3_amd64.deb ...
-    default: Unpacking libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.3) ...
-    default: Selecting previously unselected package apt-transport-https.
-    default: Preparing to unpack .../01-apt-transport-https_1.6.12_all.deb ...
-    default: Unpacking apt-transport-https (1.6.12) ...
-    default: Selecting previously unselected package bats.
-    default: Preparing to unpack .../02-bats_0.4.0-1.1_all.deb ...
-    default: Unpacking bats (0.4.0-1.1) ...
-    default: Selecting previously unselected package java-common.
-    default: Preparing to unpack .../03-java-common_0.68ubuntu1~18.04.1_all.deb ...
-    default: Unpacking java-common (0.68ubuntu1~18.04.1) ...
-    default: Selecting previously unselected package libavahi-common-data:amd64.
-    default: Preparing to unpack .../04-libavahi-common-data_0.7-3.1ubuntu1.2_amd64.deb ...
-    default: Unpacking libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
-    default: Selecting previously unselected package libavahi-common3:amd64.
-    default: Preparing to unpack .../05-libavahi-common3_0.7-3.1ubuntu1.2_amd64.deb ...
-    default: Unpacking libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
-    default: Selecting previously unselected package libavahi-client3:amd64.
-    default: Preparing to unpack .../06-libavahi-client3_0.7-3.1ubuntu1.2_amd64.deb ...
-    default: Unpacking libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
-    default: Selecting previously unselected package libcups2:amd64.
-    default: Preparing to unpack .../07-libcups2_2.2.7-1ubuntu2.7_amd64.deb ...
-    default: Unpacking libcups2:amd64 (2.2.7-1ubuntu2.7) ...
-    default: Selecting previously unselected package liblcms2-2:amd64.
-    default: Preparing to unpack .../08-liblcms2-2_2.9-1ubuntu0.1_amd64.deb ...
-    default: Unpacking liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
-    default: Selecting previously unselected package libjpeg8:amd64.
-    default: Preparing to unpack .../09-libjpeg8_8c-2ubuntu8_amd64.deb ...
-    default: Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
-    default: Selecting previously unselected package fonts-dejavu-core.
-    default: Preparing to unpack .../10-fonts-dejavu-core_2.37-1_all.deb ...
-    default: Unpacking fonts-dejavu-core (2.37-1) ...
-    default: Selecting previously unselected package fontconfig-config.
-    default: Preparing to unpack .../11-fontconfig-config_2.12.6-0ubuntu2_all.deb ...
-    default: Unpacking fontconfig-config (2.12.6-0ubuntu2) ...
-    default: Selecting previously unselected package libfontconfig1:amd64.
-    default: Preparing to unpack .../12-libfontconfig1_2.12.6-0ubuntu2_amd64.deb ...
-    default: Unpacking libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
-    default: Selecting previously unselected package libnspr4:amd64.
-    default: Preparing to unpack .../13-libnspr4_2%3a4.18-1ubuntu1_amd64.deb ...
-    default: Unpacking libnspr4:amd64 (2:4.18-1ubuntu1) ...
-    default: Selecting previously unselected package libnss3:amd64.
-    default: Preparing to unpack .../14-libnss3_2%3a3.35-2ubuntu2.3_amd64.deb ...
-    default: Unpacking libnss3:amd64 (2:3.35-2ubuntu2.3) ...
-    default: Selecting previously unselected package libasound2-data.
-    default: Preparing to unpack .../15-libasound2-data_1.1.3-5ubuntu0.2_all.deb ...
-    default: Unpacking libasound2-data (1.1.3-5ubuntu0.2) ...
-    default: Selecting previously unselected package libasound2:amd64.
-    default: Preparing to unpack .../16-libasound2_1.1.3-5ubuntu0.2_amd64.deb ...
-    default: Unpacking libasound2:amd64 (1.1.3-5ubuntu0.2) ...
-    default: Selecting previously unselected package libpcsclite1:amd64.
-    default: Preparing to unpack .../17-libpcsclite1_1.8.23-1_amd64.deb ...
-    default: Unpacking libpcsclite1:amd64 (1.8.23-1) ...
-    default: Selecting previously unselected package libxi6:amd64.
-    default: Preparing to unpack .../18-libxi6_2%3a1.7.9-1_amd64.deb ...
-    default: Unpacking libxi6:amd64 (2:1.7.9-1) ...
-    default: Selecting previously unselected package libxrender1:amd64.
-    default: Preparing to unpack .../19-libxrender1_1%3a0.9.10-1_amd64.deb ...
-    default: Unpacking libxrender1:amd64 (1:0.9.10-1) ...
-    default: Selecting previously unselected package x11-common.
-    default: Preparing to unpack .../20-x11-common_1%3a7.7+19ubuntu7.1_all.deb ...
-    default: dpkg-query: no packages found matching nux-tools
-    default: Unpacking x11-common (1:7.7+19ubuntu7.1) ...
-    default: Selecting previously unselected package libxtst6:amd64.
-    default: Preparing to unpack .../21-libxtst6_2%3a1.2.3-1_amd64.deb ...
-    default: Unpacking libxtst6:amd64 (2:1.2.3-1) ...
-    default: Selecting previously unselected package openjdk-11-jre-headless:amd64.
-    default: Preparing to unpack .../22-openjdk-11-jre-headless_11.0.4+11-1ubuntu2~18.04.3_amd64.deb ...
-    default: Unpacking openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
-    default: Selecting previously unselected package ca-certificates-java.
-    default: Preparing to unpack .../23-ca-certificates-java_20180516ubuntu1~18.04.1_all.deb ...
-    default: Unpacking ca-certificates-java (20180516ubuntu1~18.04.1) ...
-    default: Selecting previously unselected package libonig4:amd64.
-    default: Preparing to unpack .../24-libonig4_6.7.0-1_amd64.deb ...
-    default: Unpacking libonig4:amd64 (6.7.0-1) ...
-    default: Selecting previously unselected package libjq1:amd64.
-    default: Preparing to unpack .../25-libjq1_1.5+dfsg-2_amd64.deb ...
-    default: Unpacking libjq1:amd64 (1.5+dfsg-2) ...
-    default: Selecting previously unselected package jq.
-    default: Preparing to unpack .../26-jq_1.5+dfsg-2_amd64.deb ...
-    default: Unpacking jq (1.5+dfsg-2) ...
-    default: Selecting previously unselected package libssh2-1:amd64.
-    default: Preparing to unpack .../27-libssh2-1_1.8.0-1_amd64.deb ...
-    default: Unpacking libssh2-1:amd64 (1.8.0-1) ...
-    default: Selecting previously unselected package mc-data.
-    default: Preparing to unpack .../28-mc-data_3%3a4.8.19-1_all.deb ...
-    default: Unpacking mc-data (3:4.8.19-1) ...
-    default: Selecting previously unselected package mc.
-    default: Preparing to unpack .../29-mc_3%3a4.8.19-1_amd64.deb ...
-    default: Unpacking mc (3:4.8.19-1) ...
-    default: Setting up bats (0.4.0-1.1) ...
-    default: Setting up libxi6:amd64 (2:1.7.9-1) ...
-    default: Setting up apt-transport-https (1.6.12) ...
-    default: Setting up liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
-    default: Setting up libpcsclite1:amd64 (1.8.23-1) ...
-    default: Setting up fonts-dejavu-core (2.37-1) ...
-    default: Setting up libasound2-data (1.1.3-5ubuntu0.2) ...
-    default: Setting up libonig4:amd64 (6.7.0-1) ...
-    default: Setting up mc-data (3:4.8.19-1) ...
-    default: Setting up java-common (0.68ubuntu1~18.04.1) ...
-    default: Setting up libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.3) ...
-    default: Setting up libnspr4:amd64 (2:4.18-1ubuntu1) ...
-    default: Setting up libasound2:amd64 (1.1.3-5ubuntu0.2) ...
-    default: Setting up libjq1:amd64 (1.5+dfsg-2) ...
-    default: Setting up libssh2-1:amd64 (1.8.0-1) ...
-    default: Setting up libxrender1:amd64 (1:0.9.10-1) ...
-    default: Setting up mc (3:4.8.19-1) ...
-    default: Setting up x11-common (1:7.7+19ubuntu7.1) ...
-    default: update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
-    default: Setting up libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
-    default: Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
-    default: Setting up jq (1.5+dfsg-2) ...
-    default: Setting up fontconfig-config (2.12.6-0ubuntu2) ...
-    default: Setting up libnss3:amd64 (2:3.35-2ubuntu2.3) ...
-    default: Setting up libxtst6:amd64 (2:1.2.3-1) ...
-    default: Setting up libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
-    default: Setting up libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
-    default: Setting up libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
-    default: Setting up libcups2:amd64 (2.2.7-1ubuntu2.7) ...
-    default: Setting up openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
-    default: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
-    default: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
-    default: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
-    default: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
-    default: update-alternatives: 
-    default: using /usr/lib/jvm/java-11-openjdk-amd64/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
-    default: update-alternatives: 
-    default: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
-    default: update-alternatives: 
-    default: using /usr/lib/jvm/java-11-openjdk-amd64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
-    default: update-alternatives: 
-    default: using /usr/lib/jvm/java-11-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
-    default: Setting up ca-certificates-java (20180516ubuntu1~18.04.1) ...
-    default: head: cannot open '/etc/ssl/certs/java/cacerts' for reading: No such file or directory
-    default: Adding debian:QuoVadis_Root_CA_2_G3.pem
-    default: Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
-    default: Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
-    default: Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
-    default: Adding debian:Taiwan_GRCA.pem
-    default: Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
-    default: Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
-    default: Adding debian:SwissSign_Gold_CA_-_G2.pem
-    default: Adding debian:CFCA_EV_ROOT.pem
-    default: Adding debian:Security_Communication_Root_CA.pem
-    default: Adding debian:VeriSign_Universal_Root_Certification_Authority.pem
-    default: Adding debian:COMODO_Certification_Authority.pem
-    default: Adding debian:COMODO_RSA_Certification_Authority.pem
-    default: Adding debian:CA_Disig_Root_R2.pem
-    default: Adding debian:COMODO_ECC_Certification_Authority.pem
-    default: Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
-    default: Adding debian:Certigna.pem
-    default: Adding debian:GeoTrust_Primary_Certification_Authority_-_G2.pem
-    default: Adding debian:Comodo_AAA_Services_root.pem
-    default: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.pem
-    default: Adding debian:Amazon_Root_CA_2.pem
-    default: Adding debian:thawte_Primary_Root_CA_-_G2.pem
-    default: Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
-    default: Adding debian:Certplus_Root_CA_G2.pem
-    default: Adding debian:SwissSign_Silver_CA_-_G2.pem
-    default: Adding debian:Certplus_Class_2_Primary_CA.pem
-    default: Adding debian:Entrust_Root_Certification_Authority.pem
-    default: Adding debian:EE_Certification_Centre_Root_CA.pem
-    default: Adding debian:DigiCert_Assured_ID_Root_G2.pem
-    default: Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
-    default: Adding debian:AddTrust_External_Root.pem
-    default: Adding debian:AffirmTrust_Premium_ECC.pem
-    default: Adding debian:Amazon_Root_CA_1.pem
-    default: Adding debian:TrustCor_ECA-1.pem
-    default: Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
-    default: Adding debian:OpenTrust_Root_CA_G2.pem
-    default: Adding debian:GlobalSign_Root_CA_-_R3.pem
-    default: Adding debian:USERTrust_RSA_Certification_Authority.pem
-    default: Adding debian:DigiCert_Global_Root_G3.pem
-    default: Adding debian:Cybertrust_Global_Root.pem
-    default: Adding debian:Hongkong_Post_Root_CA_1.pem
-    default: Adding debian:Staat_der_Nederlanden_Root_CA_-_G3.pem
-    default: Adding debian:SZAFIR_ROOT_CA2.pem
-    default: Adding debian:TrustCor_RootCert_CA-1.pem
-    default: Adding debian:Secure_Global_CA.pem
-    default: Adding debian:TWCA_Root_Certification_Authority.pem
-    default: Adding debian:DigiCert_Global_Root_G2.pem
-    default: Adding debian:QuoVadis_Root_CA_2.pem
-    default: Adding debian:Deutsche_Telekom_Root_CA_2.pem
-    default: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem
-    default: Adding debian:AffirmTrust_Networking.pem
-    default: Adding debian:GlobalSign_Root_CA.pem
-    default: Adding debian:GeoTrust_Universal_CA.pem
-    default: Adding debian:USERTrust_ECC_Certification_Authority.pem
-    default: Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
-    default: Adding debian:Certum_Trusted_Network_CA_2.pem
-    default: Adding debian:TeliaSonera_Root_CA_v1.pem
-    default: Adding debian:TWCA_Global_Root_CA.pem
-    default: Adding debian:Baltimore_CyberTrust_Root.pem
-    default: Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
-    default: Adding debian:Buypass_Class_2_Root_CA.pem
-    default: Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
-    default: Adding debian:DigiCert_Assured_ID_Root_CA.pem
-    default: Adding debian:OpenTrust_Root_CA_G1.pem
-    default: Adding debian:Security_Communication_RootCA2.pem
-    default: Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
-    default: Adding debian:Atos_TrustedRoot_2011.pem
-    default: Adding debian:Amazon_Root_CA_3.pem
-    default: Adding debian:XRamp_Global_CA_Root.pem
-    default: Adding debian:Visa_eCommerce_Root.pem
-    default: Adding debian:Amazon_Root_CA_4.pem
-    default: Adding debian:Starfield_Class_2_CA.pem
-    default: Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
-    default: Adding debian:Certum_Trusted_Network_CA.pem
-    default: Adding debian:thawte_Primary_Root_CA.pem
-    default: Adding debian:ACCVRAIZ1.pem
-    default: Adding debian:ePKI_Root_Certification_Authority.pem
-    default: Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
-    default: Adding debian:DigiCert_Global_Root_CA.pem
-    default: Adding debian:QuoVadis_Root_CA_3_G3.pem
-    default: Adding debian:Staat_der_Nederlanden_EV_Root_CA.pem
-    default: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
-    default: Adding debian:thawte_Primary_Root_CA_-_G3.pem
-    default: Adding debian:Chambers_of_Commerce_Root_-_2008.pem
-    default: Adding debian:ISRG_Root_X1.pem
-    default: Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
-    default: Adding debian:TÜRKTRUST_Elektronik_Sertifika_Hizmet_Sağlayıcısı_H5.pem
-    default: Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
-    default: Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
-    default: Adding debian:SecureTrust_CA.pem
-    default: Adding debian:OISTE_WISeKey_Global_Root_GA_CA.pem
-    default: Adding debian:QuoVadis_Root_CA_1_G3.pem
-    default: Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
-    default: Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
-    default: Adding debian:certSIGN_ROOT_CA.pem
-    default: Adding debian:GeoTrust_Universal_CA_2.pem
-    default: Adding debian:TrustCor_RootCert_CA-2.pem
-    default: Adding debian:Staat_der_Nederlanden_Root_CA_-_G2.pem
-    default: Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
-    default: Adding debian:Actalis_Authentication_Root_CA.pem
-    default: Adding debian:SecureSign_RootCA11.pem
-    default: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
-    default: Adding debian:DigiCert_Trusted_Root_G4.pem
-    default: Adding debian:GlobalSign_Root_CA_-_R2.pem
-    default: Adding debian:LuxTrust_Global_Root_2.pem
-    default: Adding debian:AffirmTrust_Commercial.pem
-    default: Adding debian:Global_Chambersign_Root_-_2008.pem
-    default: Adding debian:GeoTrust_Global_CA.pem
-    default: Adding debian:DigiCert_Assured_ID_Root_G3.pem
-    default: Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
-    default: Adding debian:Network_Solutions_Certificate_Authority.pem
-    default: Adding debian:OpenTrust_Root_CA_G3.pem
-    default: Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
-    default: Adding debian:GeoTrust_Primary_Certification_Authority_-_G3.pem
-    default: Adding debian:Certplus_Root_CA_G1.pem
-    default: Adding debian:Trustis_FPS_Root_CA.pem
-    default: Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.pem
-    default: Adding debian:EC-ACC.pem
-    default: Adding debian:AC_RAIZ_FNMT-RCM.pem
-    default: Adding debian:IdenTrust_Commercial_Root_CA_1.pem
-    default: Adding debian:DST_Root_CA_X3.pem
-    default: Adding debian:QuoVadis_Root_CA_3.pem
-    default: Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
-    default: Adding debian:Sonera_Class_2_Root_CA.pem
-    default: Adding debian:AffirmTrust_Premium.pem
-    default: Adding debian:E-Tugra_Certification_Authority.pem
-    default: Adding debian:GeoTrust_Primary_Certification_Authority.pem
-    default: Adding debian:QuoVadis_Root_CA.pem
-    default: Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
-    default: Adding debian:Certinomis_-_Root_CA.pem
-    default: Adding debian:Buypass_Class_3_Root_CA.pem
-    default: Adding debian:Izenpe.com.pem
-    default: Adding debian:Go_Daddy_Class_2_CA.pem
-    default: done.
-    default: Processing triggers for mime-support (3.60ubuntu1) ...
-    default: Processing triggers for ureadahead (0.100.0-21) ...
-    default: Processing triggers for libc-bin (2.27-3ubuntu1) ...
-    default: Processing triggers for systemd (237-3ubuntu10.31) ...
-    default: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
-    default: Processing triggers for ca-certificates (20180409) ...
-    default: Updating certificates in /etc/ssl/certs...
-    default: 0 added, 0 removed; done.
-    default: Running hooks in /etc/ca-certificates/update.d...
-    default: done.
-    default: done.
-    default: Warning: apt-key output should not be parsed (stdout is not a terminal)
-    default: OK
-    default: deb https://repos.influxdata.com/ubuntu bionic stable
-    default: Hit:1 http://us.archive.ubuntu.com/ubuntu bionic InRelease
-    default: Hit:2 http://security.ubuntu.com/ubuntu bionic-security InRelease
-    default: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
-    default: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
-    default: Get:5 https://repos.influxdata.com/ubuntu bionic InRelease [4,731 B]
-    default: Get:6 https://repos.influxdata.com/ubuntu bionic/stable i386 Packages [922 B]
-    default: Get:7 https://repos.influxdata.com/ubuntu bionic/stable amd64 Packages [924 B]
-    default: Fetched 6,577 B in 1s (6,823 B/s)
-    default: Reading package lists...
-    default: Reading package lists...
-    default: Building dependency tree...
-    default: 
-    default: Reading state information...
-    default: The following NEW packages will be installed:
-    default:   influxdb
-    default: 0 upgraded, 1 newly installed, 0 to remove and 36 not upgraded.
-    default: Need to get 63.5 MB of archives.
-    default: After this operation, 178 MB of additional disk space will be used.
-    default: Get:1 https://repos.influxdata.com/ubuntu bionic/stable amd64 influxdb amd64 1.7.9-1 [63.5 MB]
-    default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
-    default: Fetched 63.5 MB in 2s (26.3 MB/s)
-    default: Selecting previously unselected package influxdb.
-    default: (Reading database ... 
-    default: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
-    default: (Reading database ... 60%
-    default: (Reading database ... 65%
-    default: (Reading database ... 70%
-    default: (Reading database ... 75%
-    default: (Reading database ... 80%
-    default: (Reading database ... 85%
-    default: (Reading database ... 90%
-    default: (Reading database ... 95%
-    default: (Reading database ... 100%(Reading database ... 106877 files and directories currently installed.)
-    default: Preparing to unpack .../influxdb_1.7.9-1_amd64.deb ...
-    default: Unpacking influxdb (1.7.9-1) ...
-    default: Setting up influxdb (1.7.9-1) ...
-    default: Created symlink /etc/systemd/system/influxd.service → /lib/systemd/system/influxdb.service.
-    default: Created symlink /etc/systemd/system/multi-user.target.wants/influxdb.service → /lib/systemd/system/influxdb.service.
-    default: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
-    default: Reading package lists...
-    default: Building dependency tree...
-    default: Reading state information...
-    default: The following NEW packages will be installed:
-    default:   telegraf
-    default: 0 upgraded, 1 newly installed, 0 to remove and 36 not upgraded.
-    default: Need to get 21.0 MB of archives.
-    default: After this operation, 72.2 MB of additional disk space will be used.
-    default: Get:1 https://repos.influxdata.com/ubuntu bionic/stable amd64 telegraf amd64 1.12.5-1 [21.0 MB]
-    default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
-    default: Fetched 21.0 MB in 1s (22.6 MB/s)
-    default: Selecting previously unselected package telegraf.
-    default: (Reading database ... 
-    default: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
-    default: (Reading database ... 60%
-    default: (Reading database ... 65%(Reading database ... 70%
-    default: (Reading database ... 75%
-    default: (Reading database ... 80%
-    default: (Reading database ... 85%
-    default: (Reading database ... 90%
-    default: (Reading database ... 95%
-    default: (Reading database ... 100%(Reading database ... 106903 files and directories currently installed.)
-    default: Preparing to unpack .../telegraf_1.12.5-1_amd64.deb ...
-    default: Unpacking telegraf (1.12.5-1) ...
-    default: Setting up telegraf (1.12.5-1) ...
-    default: Created symlink /etc/systemd/system/multi-user.target.wants/telegraf.service → /lib/systemd/system/telegraf.service.
-    default: Warning: apt-key output should not be parsed (stdout is not a terminal)
-    default: OK
-    default: Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
-    default: Hit:2 https://repos.influxdata.com/ubuntu bionic InRelease
-    default: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic InRelease
-    default: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
-    default: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
-    default: Get:6 https://packages.grafana.com/oss/deb stable InRelease [12.1 kB]
-    default: Get:7 https://packages.grafana.com/oss/deb stable/main amd64 Packages [13.8 kB]
-    default: Fetched 25.9 kB in 1s (26.2 kB/s)
-    default: Reading package lists...
-    default: 
-    default: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-    default: Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
-    default: Hit:2 https://packages.grafana.com/oss/deb stable InRelease
-    default: Hit:3 https://repos.influxdata.com/ubuntu bionic InRelease
-    default: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic InRelease
-    default: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
-    default: Hit:6 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
-    default: Reading package lists...
-    default: Building dependency tree...
-    default: 
-    default: Reading state information...
-    default: 36 packages can be upgraded. Run 'apt list --upgradable' to see them.
-    default: WARNING: 
-    default: apt
-    default:  
-    default: does not have a stable CLI interface. 
-    default: Use with caution in scripts.
-    default: Reading package lists...
-    default: Building dependency tree...
-    default: Reading state information...
-    default: The following NEW packages will be installed:
-    default:   grafana
-    default: 0 upgraded, 1 newly installed, 0 to remove and 36 not upgraded.
-    default: Need to get 59.9 MB of archives.
-    default: After this operation, 172 MB of additional disk space will be used.
-    default: Get:1 https://packages.grafana.com/oss/deb stable/main amd64 grafana amd64 6.4.4 [59.9 MB]
-    default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
-    default: Fetched 59.9 MB in 2s (26.5 MB/s)
-    default: Selecting previously unselected package grafana.
-    default: (Reading database ... 
-    default: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
-    default: (Reading database ... 60%
-    default: (Reading database ... 65%
-    default: (Reading database ... 70%
-    default: (Reading database ... 75%
-    default: (Reading database ... 80%
-    default: (Reading database ... 85%
-    default: (Reading database ... 90%
-    default: (Reading database ... 95%
-    default: (Reading database ... 100%(Reading database ... 106915 files and directories currently installed.)
-    default: Preparing to unpack .../grafana_6.4.4_amd64.deb ...
-    default: Unpacking grafana (6.4.4) ...
-    default: Setting up grafana (6.4.4) ...
-    default: Adding system user `grafana' (UID 112) ...
-    default: Adding new user `grafana' (UID 112) with group `grafana' ...
-    default: Not creating home directory `/usr/share/grafana'.
-    default: ### NOT starting on installation, please execute the following statements to configure grafana to start automatically using systemd
-    default:  sudo /bin/systemctl daemon-reload
-    default:  sudo /bin/systemctl enable grafana-server
-    default: ### You can start grafana-server by executing
-    default:  sudo /bin/systemctl start grafana-server
-    default: Processing triggers for systemd (237-3ubuntu10.31) ...
-    default: Processing triggers for ureadahead (0.100.0-21) ...
-    default: Synchronizing state of grafana-server.service with SysV service script with /lib/systemd/systemd-sysv-install.
-    default: Executing: /lib/systemd/systemd-sysv-install enable grafana-server
-    default: Created symlink /etc/systemd/system/multi-user.target.wants/grafana-server.service → /usr/lib/systemd/system/grafana-server.service.
-[1G   Test Suite for InfluxDB[K[149G1/2[2G[1G ✓ Test Suite for InfluxDB[K
-[0m[1G   Check Grafana[K[149G2/2[2G[1G ✓ Check Grafana[K
+START:  Thu 14 Nov 18:53:27 GMT 2019
+==> client: Removing domain...
+==> tighost: Removing domain...
+Bringing machine 'tighost' up with 'libvirt' provider...
+Bringing machine 'client' up with 'libvirt' provider...
+==> client: Checking if box 'generic/ubuntu1804' version '1.9.38' is up to date...
+==> tighost: Checking if box 'generic/ubuntu1804' version '1.9.38' is up to date...
+==> client: Creating image (snapshot of base box volume).
+==> tighost: Creating image (snapshot of base box volume).
+==> tighost: Creating domain with the following settings...
+==> tighost:  -- Name:              TIG-Stack-Vagrant_tighost
+==> tighost:  -- Domain type:       kvm
+==> tighost:  -- Cpus:              2
+==> client: Creating domain with the following settings...
+==> tighost:  -- Feature:           acpi
+==> client:  -- Name:              TIG-Stack-Vagrant_client
+==> tighost:  -- Feature:           apic
+==> client:  -- Domain type:       kvm
+==> client:  -- Cpus:              2
+==> client:  -- Feature:           acpi
+==> client:  -- Feature:           apic
+==> tighost:  -- Feature:           pae
+==> client:  -- Feature:           pae
+==> client:  -- Memory:            4096M
+==> client:  -- Management MAC:    
+==> tighost:  -- Memory:            4096M
+==> client:  -- Loader:            
+==> client:  -- Nvram:             
+==> client:  -- Base box:          generic/ubuntu1804
+==> client:  -- Storage pool:      default
+==> tighost:  -- Management MAC:    
+==> client:  -- Image:             /var/lib/libvirt/images/TIG-Stack-Vagrant_client.img (32G)
+==> tighost:  -- Loader:            
+==> client:  -- Volume Cache:      default
+==> tighost:  -- Nvram:             
+==> tighost:  -- Base box:          generic/ubuntu1804
+==> tighost:  -- Storage pool:      default
+==> tighost:  -- Image:             /var/lib/libvirt/images/TIG-Stack-Vagrant_tighost.img (32G)
+==> tighost:  -- Volume Cache:      default
+==> tighost:  -- Kernel:            
+==> tighost:  -- Initrd:            
+==> tighost:  -- Graphics Type:     vnc
+==> client:  -- Kernel:            
+==> tighost:  -- Graphics Port:     -1
+==> tighost:  -- Graphics IP:       127.0.0.1
+==> tighost:  -- Graphics Password: Not defined
+==> tighost:  -- Video Type:        cirrus
+==> tighost:  -- Video VRAM:        256
+==> tighost:  -- Sound Type:	
+==> tighost:  -- Keymap:            en-us
+==> tighost:  -- TPM Path:          
+==> tighost:  -- INPUT:             type=mouse, bus=ps2
+==> client:  -- Initrd:            
+==> client:  -- Graphics Type:     vnc
+==> client:  -- Graphics Port:     -1
+==> client:  -- Graphics IP:       127.0.0.1
+==> client:  -- Graphics Password: Not defined
+==> client:  -- Video Type:        cirrus
+==> client:  -- Video VRAM:        256
+==> client:  -- Sound Type:	
+==> client:  -- Keymap:            en-us
+==> client:  -- TPM Path:          
+==> tighost: Pruning invalid NFS exports. Administrator privileges will be required...
+==> client:  -- INPUT:             type=mouse, bus=ps2
+==> client: Pruning invalid NFS exports. Administrator privileges will be required...
+==> tighost: Creating shared folders metadata...
+==> tighost: Starting domain.
+==> tighost: Waiting for domain to get an IP address...
+==> client: Creating shared folders metadata...
+==> client: Starting domain.
+==> client: Waiting for domain to get an IP address...
+==> tighost: Waiting for SSH to become available...
+==> client: Waiting for SSH to become available...
+    tighost: 
+    tighost: Vagrant insecure key detected. Vagrant will automatically replace
+    tighost: this with a newly generated keypair for better security.
+    client: 
+    client: Vagrant insecure key detected. Vagrant will automatically replace
+    client: this with a newly generated keypair for better security.
+    tighost: 
+    tighost: Inserting generated public key within guest...
+    tighost: Removing insecure key from the guest if it's present...
+    client: 
+    client: Inserting generated public key within guest...
+    tighost: Key inserted! Disconnecting and reconnecting using new SSH key...
+    client: Removing insecure key from the guest if it's present...
+    client: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> tighost: Setting hostname...
+==> client: Setting hostname...
+==> tighost: Configuring and enabling network interfaces...
+==> client: Configuring and enabling network interfaces...
+==> tighost: Installing NFS client...
+==> client: Installing NFS client...
+==> tighost: Exporting NFS shared folders...
+==> tighost: Preparing to edit /etc/exports. Administrator privileges will be required...
+==> tighost: Mounting NFS shared folders...
+==> tighost: Running provisioner: shell...
+==> client: Exporting NFS shared folders...
+==> client: Preparing to edit /etc/exports. Administrator privileges will be required...
+    tighost: Running: /tmp/vagrant-shell20191114-484172-m84z7i.sh
+    tighost: Reading package lists...
+    tighost: Building dependency tree...
+==> client: Mounting NFS shared folders...
+    tighost: Reading state information...
+    tighost: The following additional packages will be installed:
+    tighost:   ca-certificates-java fontconfig-config fonts-dejavu-core java-common
+    tighost:   libasound2 libasound2-data libavahi-client3 libavahi-common-data
+    tighost:   libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8 libjpeg8 libjq1
+    tighost:   liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1 libxi6
+    tighost:   libxrender1 libxtst6 mc-data x11-common
+    tighost: Suggested packages:
+    tighost:   default-jre libasound2-plugins alsa-utils cups-common liblcms2-utils pcscd
+    tighost:   arj catdvi | texlive-binaries dbview djvulibre-bin genisoimage gv
+    tighost:   imagemagick libaspell-dev links | w3m | lynx odt2txt poppler-utils python
+    tighost:   python-boto python-tz xpdf | pdf-viewer libnss-mdns fonts-dejavu-extra
+    tighost:   fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
+    tighost:   | fonts-wqy-zenhei fonts-indic
+    tighost: The following NEW packages will be installed:
+    tighost:   apt-transport-https bats ca-certificates-java fontconfig-config
+    tighost:   fonts-dejavu-core java-common jq libasound2 libasound2-data libavahi-client3
+    tighost:   libavahi-common-data libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8
+    tighost:   libjpeg8 libjq1 liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1
+    tighost:   libxi6 libxrender1 libxtst6 mc mc-data openjdk-11-jre-headless x11-common
+==> client: Running provisioner: shell...
+    tighost: 0 upgraded, 30 newly installed, 0 to remove and 36 not upgraded.
+    tighost: Need to get 43.0 MB of archives.
+    tighost: After this operation, 192 MB of additional disk space will be used.
+    tighost: Get:1 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libjpeg-turbo8 amd64 1.5.2-0ubuntu5.18.04.3 [110 kB]
+    client: Running: /tmp/vagrant-shell20191114-484172-z3lfyx.sh
+    client: Reading package lists...
+    client: Building dependency tree...
+    tighost: Get:2 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 apt-transport-https all 1.6.12 [1,692 B]
+    client: Reading state information...
+    tighost: Get:3 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 bats all 0.4.0-1.1 [14.3 kB]
+    client: The following additional packages will be installed:
+    client:   ca-certificates-java fontconfig-config fonts-dejavu-core java-common
+    client:   libasound2 libasound2-data libavahi-client3 libavahi-common-data
+    client:   libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8 libjpeg8 libjq1
+    client:   liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1 libxi6
+    client:   libxrender1 libxtst6 mc-data x11-common
+    client: Suggested packages:
+    client:   default-jre libasound2-plugins alsa-utils cups-common liblcms2-utils pcscd
+    client:   arj catdvi | texlive-binaries dbview djvulibre-bin genisoimage gv
+    client:   imagemagick libaspell-dev links | w3m | lynx odt2txt poppler-utils python
+    client:   python-boto python-tz xpdf | pdf-viewer libnss-mdns fonts-dejavu-extra
+    client:   fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
+    client:   | fonts-wqy-zenhei fonts-indic
+    client: The following NEW packages will be installed:
+    client:   apt-transport-https bats ca-certificates-java fontconfig-config
+    client:   fonts-dejavu-core java-common jq libasound2 libasound2-data libavahi-client3
+    client:   libavahi-common-data libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8
+    client:   libjpeg8 libjq1 liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1
+    client:   libxi6 libxrender1 libxtst6 mc mc-data openjdk-11-jre-headless x11-common
+    tighost: Get:4 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 java-common all 0.68ubuntu1~18.04.1 [14.5 kB]
+    tighost: Get:5 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common-data amd64 0.7-3.1ubuntu1.2 [22.1 kB]
+    tighost: Get:6 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common3 amd64 0.7-3.1ubuntu1.2 [21.6 kB]
+    tighost: Get:7 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-client3 amd64 0.7-3.1ubuntu1.2 [25.2 kB]
+    tighost: Get:8 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcups2 amd64 2.2.7-1ubuntu2.7 [211 kB]
+    tighost: Get:9 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 liblcms2-2 amd64 2.9-1ubuntu0.1 [139 kB]
+    tighost: Get:10 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2,194 B]
+    client: 0 upgraded, 30 newly installed, 0 to remove and 36 not upgraded.
+    client: Need to get 43.0 MB of archives.
+    client: After this operation, 192 MB of additional disk space will be used.
+    client: Get:1 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libjpeg-turbo8 amd64 1.5.2-0ubuntu5.18.04.3 [110 kB]
+    tighost: Get:11 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fonts-dejavu-core all 2.37-1 [1,041 kB]
+    client: Get:2 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 apt-transport-https all 1.6.12 [1,692 B]
+    client: Get:3 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 bats all 0.4.0-1.1 [14.3 kB]
+    tighost: Get:12 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fontconfig-config all 2.12.6-0ubuntu2 [55.8 kB]
+    client: Get:4 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 java-common all 0.68ubuntu1~18.04.1 [14.5 kB]
+    tighost: Get:13 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libfontconfig1 amd64 2.12.6-0ubuntu2 [137 kB]
+    client: Get:5 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common-data amd64 0.7-3.1ubuntu1.2 [22.1 kB]
+    client: Get:6 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common3 amd64 0.7-3.1ubuntu1.2 [21.6 kB]
+    tighost: Get:14 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libnspr4 amd64 2:4.18-1ubuntu1 [112 kB]
+    client: Get:7 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-client3 amd64 0.7-3.1ubuntu1.2 [25.2 kB]
+    client: Get:8 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcups2 amd64 2.2.7-1ubuntu2.7 [211 kB]
+    tighost: Get:15 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnss3 amd64 2:3.35-2ubuntu2.3 [1,136 kB]
+    client: Get:9 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 liblcms2-2 amd64 2.9-1ubuntu0.1 [139 kB]
+    tighost: Get:16 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2-data all 1.1.3-5ubuntu0.2 [36.5 kB]
+    client: Get:10 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2,194 B]
+    tighost: Get:17 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2 amd64 1.1.3-5ubuntu0.2 [359 kB]
+    client: Get:11 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fonts-dejavu-core all 2.37-1 [1,041 kB]
+    tighost: Get:18 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libpcsclite1 amd64 1.8.23-1 [21.3 kB]
+    client: Get:12 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fontconfig-config all 2.12.6-0ubuntu2 [55.8 kB]
+    tighost: Get:19 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxi6 amd64 2:1.7.9-1 [29.2 kB]
+    client: Get:13 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libfontconfig1 amd64 2.12.6-0ubuntu2 [137 kB]
+    tighost: Get:20 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxrender1 amd64 1:0.9.10-1 [18.7 kB]
+    tighost: Get:21 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 x11-common all 1:7.7+19ubuntu7.1 [22.5 kB]
+    client: Get:14 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libnspr4 amd64 2:4.18-1ubuntu1 [112 kB]
+    tighost: Get:22 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxtst6 amd64 2:1.2.3-1 [12.8 kB]
+    tighost: Get:23 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 openjdk-11-jre-headless amd64 11.0.4+11-1ubuntu2~18.04.3 [37.4 MB]
+    client: Get:15 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnss3 amd64 2:3.35-2ubuntu2.3 [1,136 kB]
+    client: Get:16 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2-data all 1.1.3-5ubuntu0.2 [36.5 kB]
+    client: Get:17 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2 amd64 1.1.3-5ubuntu0.2 [359 kB]
+    tighost: Get:24 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ca-certificates-java all 20180516ubuntu1~18.04.1 [12.2 kB]
+    client: Get:18 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libpcsclite1 amd64 1.8.23-1 [21.3 kB]
+    tighost: Get:25 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libonig4 amd64 6.7.0-1 [119 kB]
+    client: Get:19 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxi6 amd64 2:1.7.9-1 [29.2 kB]
+    client: Get:20 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxrender1 amd64 1:0.9.10-1 [18.7 kB]
+    tighost: Get:26 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libjq1 amd64 1.5+dfsg-2 [111 kB]
+    client: Get:21 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 x11-common all 1:7.7+19ubuntu7.1 [22.5 kB]
+    client: Get:22 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxtst6 amd64 2:1.2.3-1 [12.8 kB]
+    tighost: Get:27 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 jq amd64 1.5+dfsg-2 [45.6 kB]
+    client: Get:23 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 openjdk-11-jre-headless amd64 11.0.4+11-1ubuntu2~18.04.3 [37.4 MB]
+    tighost: Get:28 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libssh2-1 amd64 1.8.0-1 [73.2 kB]
+    tighost: Get:29 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc-data all 3:4.8.19-1 [1,238 kB]
+    tighost: Get:30 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc amd64 3:4.8.19-1 [474 kB]
+    client: Get:24 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ca-certificates-java all 20180516ubuntu1~18.04.1 [12.2 kB]
+    client: Get:25 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libonig4 amd64 6.7.0-1 [119 kB]
+    tighost: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    tighost: Fetched 43.0 MB in 17s (2,588 kB/s)
+    tighost: Selecting previously unselected package libjpeg-turbo8:amd64.
+    tighost: (Reading database ... 
+    tighost: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+    tighost: (Reading database ... 60%
+    tighost: (Reading database ... 65%
+    tighost: (Reading database ... 70%
+    tighost: (Reading database ... 75%
+    tighost: (Reading database ... 80%
+    tighost: (Reading database ... 85%
+    tighost: (Reading database ... 90%
+    tighost: (Reading database ... 95%
+    tighost: (Reading database ... 100%(Reading database ... 105688 files and directories currently installed.)
+    tighost: Preparing to unpack .../00-libjpeg-turbo8_1.5.2-0ubuntu5.18.04.3_amd64.deb ...
+    tighost: Unpacking libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.3) ...
+    tighost: Selecting previously unselected package apt-transport-https.
+    tighost: Preparing to unpack .../01-apt-transport-https_1.6.12_all.deb ...
+    tighost: Unpacking apt-transport-https (1.6.12) ...
+    client: Get:26 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libjq1 amd64 1.5+dfsg-2 [111 kB]
+    tighost: Selecting previously unselected package bats.
+    tighost: Preparing to unpack .../02-bats_0.4.0-1.1_all.deb ...
+    tighost: Unpacking bats (0.4.0-1.1) ...
+    tighost: Selecting previously unselected package java-common.
+    tighost: Preparing to unpack .../03-java-common_0.68ubuntu1~18.04.1_all.deb ...
+    tighost: Unpacking java-common (0.68ubuntu1~18.04.1) ...
+    tighost: Selecting previously unselected package libavahi-common-data:amd64.
+    tighost: Preparing to unpack .../04-libavahi-common-data_0.7-3.1ubuntu1.2_amd64.deb ...
+    tighost: Unpacking libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
+    tighost: Selecting previously unselected package libavahi-common3:amd64.
+    tighost: Preparing to unpack .../05-libavahi-common3_0.7-3.1ubuntu1.2_amd64.deb ...
+    client: Get:27 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 jq amd64 1.5+dfsg-2 [45.6 kB]
+    tighost: Unpacking libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
+    tighost: Selecting previously unselected package libavahi-client3:amd64.
+    tighost: Preparing to unpack .../06-libavahi-client3_0.7-3.1ubuntu1.2_amd64.deb ...
+    tighost: Unpacking libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
+    tighost: Selecting previously unselected package libcups2:amd64.
+    tighost: Preparing to unpack .../07-libcups2_2.2.7-1ubuntu2.7_amd64.deb ...
+    tighost: Unpacking libcups2:amd64 (2.2.7-1ubuntu2.7) ...
+    client: Get:28 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libssh2-1 amd64 1.8.0-1 [73.2 kB]
+    tighost: Selecting previously unselected package liblcms2-2:amd64.
+    tighost: Preparing to unpack .../08-liblcms2-2_2.9-1ubuntu0.1_amd64.deb ...
+    tighost: Unpacking liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
+    tighost: Selecting previously unselected package libjpeg8:amd64.
+    tighost: Preparing to unpack .../09-libjpeg8_8c-2ubuntu8_amd64.deb ...
+    tighost: Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+    tighost: Selecting previously unselected package fonts-dejavu-core.
+    tighost: Preparing to unpack .../10-fonts-dejavu-core_2.37-1_all.deb ...
+    client: Get:29 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc-data all 3:4.8.19-1 [1,238 kB]
+    tighost: Unpacking fonts-dejavu-core (2.37-1) ...
+    tighost: Selecting previously unselected package fontconfig-config.
+    tighost: Preparing to unpack .../11-fontconfig-config_2.12.6-0ubuntu2_all.deb ...
+    tighost: Unpacking fontconfig-config (2.12.6-0ubuntu2) ...
+    tighost: Selecting previously unselected package libfontconfig1:amd64.
+    tighost: Preparing to unpack .../12-libfontconfig1_2.12.6-0ubuntu2_amd64.deb ...
+    tighost: Unpacking libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+    tighost: Selecting previously unselected package libnspr4:amd64.
+    tighost: Preparing to unpack .../13-libnspr4_2%3a4.18-1ubuntu1_amd64.deb ...
+    tighost: Unpacking libnspr4:amd64 (2:4.18-1ubuntu1) ...
+    client: Get:30 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc amd64 3:4.8.19-1 [474 kB]
+    tighost: Selecting previously unselected package libnss3:amd64.
+    tighost: Preparing to unpack .../14-libnss3_2%3a3.35-2ubuntu2.3_amd64.deb ...
+    tighost: Unpacking libnss3:amd64 (2:3.35-2ubuntu2.3) ...
+    tighost: Selecting previously unselected package libasound2-data.
+    tighost: Preparing to unpack .../15-libasound2-data_1.1.3-5ubuntu0.2_all.deb ...
+    tighost: Unpacking libasound2-data (1.1.3-5ubuntu0.2) ...
+    tighost: Selecting previously unselected package libasound2:amd64.
+    tighost: Preparing to unpack .../16-libasound2_1.1.3-5ubuntu0.2_amd64.deb ...
+    tighost: Unpacking libasound2:amd64 (1.1.3-5ubuntu0.2) ...
+    tighost: Selecting previously unselected package libpcsclite1:amd64.
+    tighost: Preparing to unpack .../17-libpcsclite1_1.8.23-1_amd64.deb ...
+    tighost: Unpacking libpcsclite1:amd64 (1.8.23-1) ...
+    client: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    client: Fetched 43.0 MB in 18s (2,357 kB/s)
+    tighost: Selecting previously unselected package libxi6:amd64.
+    tighost: Preparing to unpack .../18-libxi6_2%3a1.7.9-1_amd64.deb ...
+    tighost: Unpacking libxi6:amd64 (2:1.7.9-1) ...
+    client: Selecting previously unselected package libjpeg-turbo8:amd64.
+    client: (Reading database ... 
+    client: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%
+    client: (Reading database ... 55%
+    client: (Reading database ... 60%
+    client: (Reading database ... 65%
+    client: (Reading database ... 70%
+    client: (Reading database ... 75%
+    client: (Reading database ... 80%
+    client: (Reading database ... 85%
+    client: (Reading database ... 90%
+    client: (Reading database ... 95%
+    client: (Reading database ... 100%(Reading database ... 105688 files and directories currently installed.)
+    client: Preparing to unpack .../00-libjpeg-turbo8_1.5.2-0ubuntu5.18.04.3_amd64.deb ...
+    client: Unpacking libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.3) ...
+    tighost: Selecting previously unselected package libxrender1:amd64.
+    tighost: Preparing to unpack .../19-libxrender1_1%3a0.9.10-1_amd64.deb ...
+    tighost: Unpacking libxrender1:amd64 (1:0.9.10-1) ...
+    client: Selecting previously unselected package apt-transport-https.
+    client: Preparing to unpack .../01-apt-transport-https_1.6.12_all.deb ...
+    client: Unpacking apt-transport-https (1.6.12) ...
+    tighost: Selecting previously unselected package x11-common.
+    tighost: Preparing to unpack .../20-x11-common_1%3a7.7+19ubuntu7.1_all.deb ...
+    tighost: dpkg-query: no packages found matching nux-tools
+    tighost: Unpacking x11-common (1:7.7+19ubuntu7.1) ...
+    client: Selecting previously unselected package bats.
+    client: Preparing to unpack .../02-bats_0.4.0-1.1_all.deb ...
+    client: Unpacking bats (0.4.0-1.1) ...
+    tighost: Selecting previously unselected package libxtst6:amd64.
+    tighost: Preparing to unpack .../21-libxtst6_2%3a1.2.3-1_amd64.deb ...
+    tighost: Unpacking libxtst6:amd64 (2:1.2.3-1) ...
+    client: Selecting previously unselected package java-common.
+    client: Preparing to unpack .../03-java-common_0.68ubuntu1~18.04.1_all.deb ...
+    client: Unpacking java-common (0.68ubuntu1~18.04.1) ...
+    tighost: Selecting previously unselected package openjdk-11-jre-headless:amd64.
+    tighost: Preparing to unpack .../22-openjdk-11-jre-headless_11.0.4+11-1ubuntu2~18.04.3_amd64.deb ...
+    tighost: Unpacking openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
+    client: Selecting previously unselected package libavahi-common-data:amd64.
+    client: Preparing to unpack .../04-libavahi-common-data_0.7-3.1ubuntu1.2_amd64.deb ...
+    client: Unpacking libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
+    client: Selecting previously unselected package libavahi-common3:amd64.
+    client: Preparing to unpack .../05-libavahi-common3_0.7-3.1ubuntu1.2_amd64.deb ...
+    client: Unpacking libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
+    client: Selecting previously unselected package libavahi-client3:amd64.
+    client: Preparing to unpack .../06-libavahi-client3_0.7-3.1ubuntu1.2_amd64.deb ...
+    client: Unpacking libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
+    client: Selecting previously unselected package libcups2:amd64.
+    client: Preparing to unpack .../07-libcups2_2.2.7-1ubuntu2.7_amd64.deb ...
+    client: Unpacking libcups2:amd64 (2.2.7-1ubuntu2.7) ...
+    client: Selecting previously unselected package liblcms2-2:amd64.
+    client: Preparing to unpack .../08-liblcms2-2_2.9-1ubuntu0.1_amd64.deb ...
+    client: Unpacking liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
+    client: Selecting previously unselected package libjpeg8:amd64.
+    client: Preparing to unpack .../09-libjpeg8_8c-2ubuntu8_amd64.deb ...
+    client: Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+    client: Selecting previously unselected package fonts-dejavu-core.
+    client: Preparing to unpack .../10-fonts-dejavu-core_2.37-1_all.deb ...
+    client: Unpacking fonts-dejavu-core (2.37-1) ...
+    client: Selecting previously unselected package fontconfig-config.
+    client: Preparing to unpack .../11-fontconfig-config_2.12.6-0ubuntu2_all.deb ...
+    client: Unpacking fontconfig-config (2.12.6-0ubuntu2) ...
+    client: Selecting previously unselected package libfontconfig1:amd64.
+    client: Preparing to unpack .../12-libfontconfig1_2.12.6-0ubuntu2_amd64.deb ...
+    client: Unpacking libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+    client: Selecting previously unselected package libnspr4:amd64.
+    client: Preparing to unpack .../13-libnspr4_2%3a4.18-1ubuntu1_amd64.deb ...
+    client: Unpacking libnspr4:amd64 (2:4.18-1ubuntu1) ...
+    client: Selecting previously unselected package libnss3:amd64.
+    client: Preparing to unpack .../14-libnss3_2%3a3.35-2ubuntu2.3_amd64.deb ...
+    client: Unpacking libnss3:amd64 (2:3.35-2ubuntu2.3) ...
+    client: Selecting previously unselected package libasound2-data.
+    client: Preparing to unpack .../15-libasound2-data_1.1.3-5ubuntu0.2_all.deb ...
+    client: Unpacking libasound2-data (1.1.3-5ubuntu0.2) ...
+    client: Selecting previously unselected package libasound2:amd64.
+    client: Preparing to unpack .../16-libasound2_1.1.3-5ubuntu0.2_amd64.deb ...
+    client: Unpacking libasound2:amd64 (1.1.3-5ubuntu0.2) ...
+    client: Selecting previously unselected package libpcsclite1:amd64.
+    client: Preparing to unpack .../17-libpcsclite1_1.8.23-1_amd64.deb ...
+    client: Unpacking libpcsclite1:amd64 (1.8.23-1) ...
+    client: Selecting previously unselected package libxi6:amd64.
+    client: Preparing to unpack .../18-libxi6_2%3a1.7.9-1_amd64.deb ...
+    client: Unpacking libxi6:amd64 (2:1.7.9-1) ...
+    client: Selecting previously unselected package libxrender1:amd64.
+    client: Preparing to unpack .../19-libxrender1_1%3a0.9.10-1_amd64.deb ...
+    client: Unpacking libxrender1:amd64 (1:0.9.10-1) ...
+    client: Selecting previously unselected package x11-common.
+    client: Preparing to unpack .../20-x11-common_1%3a7.7+19ubuntu7.1_all.deb ...
+    client: dpkg-query: no packages found matching nux-tools
+    client: Unpacking x11-common (1:7.7+19ubuntu7.1) ...
+    client: Selecting previously unselected package libxtst6:amd64.
+    client: Preparing to unpack .../21-libxtst6_2%3a1.2.3-1_amd64.deb ...
+    client: Unpacking libxtst6:amd64 (2:1.2.3-1) ...
+    client: Selecting previously unselected package openjdk-11-jre-headless:amd64.
+    client: Preparing to unpack .../22-openjdk-11-jre-headless_11.0.4+11-1ubuntu2~18.04.3_amd64.deb ...
+    client: Unpacking openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
+    tighost: Selecting previously unselected package ca-certificates-java.
+    tighost: Preparing to unpack .../23-ca-certificates-java_20180516ubuntu1~18.04.1_all.deb ...
+    tighost: Unpacking ca-certificates-java (20180516ubuntu1~18.04.1) ...
+    tighost: Selecting previously unselected package libonig4:amd64.
+    tighost: Preparing to unpack .../24-libonig4_6.7.0-1_amd64.deb ...
+    tighost: Unpacking libonig4:amd64 (6.7.0-1) ...
+    tighost: Selecting previously unselected package libjq1:amd64.
+    tighost: Preparing to unpack .../25-libjq1_1.5+dfsg-2_amd64.deb ...
+    tighost: Unpacking libjq1:amd64 (1.5+dfsg-2) ...
+    tighost: Selecting previously unselected package jq.
+    tighost: Preparing to unpack .../26-jq_1.5+dfsg-2_amd64.deb ...
+    tighost: Unpacking jq (1.5+dfsg-2) ...
+    tighost: Selecting previously unselected package libssh2-1:amd64.
+    tighost: Preparing to unpack .../27-libssh2-1_1.8.0-1_amd64.deb ...
+    tighost: Unpacking libssh2-1:amd64 (1.8.0-1) ...
+    tighost: Selecting previously unselected package mc-data.
+    tighost: Preparing to unpack .../28-mc-data_3%3a4.8.19-1_all.deb ...
+    tighost: Unpacking mc-data (3:4.8.19-1) ...
+    tighost: Selecting previously unselected package mc.
+    tighost: Preparing to unpack .../29-mc_3%3a4.8.19-1_amd64.deb ...
+    tighost: Unpacking mc (3:4.8.19-1) ...
+    tighost: Setting up bats (0.4.0-1.1) ...
+    tighost: Setting up libxi6:amd64 (2:1.7.9-1) ...
+    tighost: Setting up apt-transport-https (1.6.12) ...
+    tighost: Setting up liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
+    tighost: Setting up libpcsclite1:amd64 (1.8.23-1) ...
+    tighost: Setting up fonts-dejavu-core (2.37-1) ...
+    tighost: Setting up libasound2-data (1.1.3-5ubuntu0.2) ...
+    tighost: Setting up libonig4:amd64 (6.7.0-1) ...
+    tighost: Setting up mc-data (3:4.8.19-1) ...
+    tighost: Setting up java-common (0.68ubuntu1~18.04.1) ...
+    tighost: Setting up libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.3) ...
+    tighost: Setting up libnspr4:amd64 (2:4.18-1ubuntu1) ...
+    tighost: Setting up libasound2:amd64 (1.1.3-5ubuntu0.2) ...
+    tighost: Setting up libjq1:amd64 (1.5+dfsg-2) ...
+    tighost: Setting up libssh2-1:amd64 (1.8.0-1) ...
+    tighost: Setting up libxrender1:amd64 (1:0.9.10-1) ...
+    tighost: Setting up mc (3:4.8.19-1) ...
+    tighost: Setting up x11-common (1:7.7+19ubuntu7.1) ...
+    client: Selecting previously unselected package ca-certificates-java.
+    client: Preparing to unpack .../23-ca-certificates-java_20180516ubuntu1~18.04.1_all.deb ...
+    client: Unpacking ca-certificates-java (20180516ubuntu1~18.04.1) ...
+    client: Selecting previously unselected package libonig4:amd64.
+    client: Preparing to unpack .../24-libonig4_6.7.0-1_amd64.deb ...
+    client: Unpacking libonig4:amd64 (6.7.0-1) ...
+    client: Selecting previously unselected package libjq1:amd64.
+    client: Preparing to unpack .../25-libjq1_1.5+dfsg-2_amd64.deb ...
+    client: Unpacking libjq1:amd64 (1.5+dfsg-2) ...
+    tighost: update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+    client: Selecting previously unselected package jq.
+    client: Preparing to unpack .../26-jq_1.5+dfsg-2_amd64.deb ...
+    client: Unpacking jq (1.5+dfsg-2) ...
+    client: Selecting previously unselected package libssh2-1:amd64.
+    client: Preparing to unpack .../27-libssh2-1_1.8.0-1_amd64.deb ...
+    client: Unpacking libssh2-1:amd64 (1.8.0-1) ...
+    client: Selecting previously unselected package mc-data.
+    client: Preparing to unpack .../28-mc-data_3%3a4.8.19-1_all.deb ...
+    client: Unpacking mc-data (3:4.8.19-1) ...
+    tighost: Setting up libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
+    tighost: Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+    tighost: Setting up jq (1.5+dfsg-2) ...
+    tighost: Setting up fontconfig-config (2.12.6-0ubuntu2) ...
+    client: Selecting previously unselected package mc.
+    client: Preparing to unpack .../29-mc_3%3a4.8.19-1_amd64.deb ...
+    client: Unpacking mc (3:4.8.19-1) ...
+    tighost: Setting up libnss3:amd64 (2:3.35-2ubuntu2.3) ...
+    client: Setting up bats (0.4.0-1.1) ...
+    tighost: Setting up libxtst6:amd64 (2:1.2.3-1) ...
+    client: Setting up libxi6:amd64 (2:1.7.9-1) ...
+    tighost: Setting up libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
+    client: Setting up apt-transport-https (1.6.12) ...
+    tighost: Setting up libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+    client: Setting up liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
+    tighost: Setting up libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
+    client: Setting up libpcsclite1:amd64 (1.8.23-1) ...
+    tighost: Setting up libcups2:amd64 (2.2.7-1ubuntu2.7) ...
+    client: Setting up fonts-dejavu-core (2.37-1) ...
+    tighost: Setting up openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
+    client: Setting up libasound2-data (1.1.3-5ubuntu0.2) ...
+    client: Setting up libonig4:amd64 (6.7.0-1) ...
+    client: Setting up mc-data (3:4.8.19-1) ...
+    client: Setting up java-common (0.68ubuntu1~18.04.1) ...
+    tighost: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+    client: Setting up libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.3) ...
+    tighost: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+    tighost: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+    client: Setting up libnspr4:amd64 (2:4.18-1ubuntu1) ...
+    tighost: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+    tighost: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+    tighost: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+    client: Setting up libasound2:amd64 (1.1.3-5ubuntu0.2) ...
+    tighost: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+    client: Setting up libjq1:amd64 (1.5+dfsg-2) ...
+    tighost: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+    client: Setting up libssh2-1:amd64 (1.8.0-1) ...
+    client: Setting up libxrender1:amd64 (1:0.9.10-1) ...
+    client: Setting up mc (3:4.8.19-1) ...
+    client: Setting up x11-common (1:7.7+19ubuntu7.1) ...
+    tighost: Setting up ca-certificates-java (20180516ubuntu1~18.04.1) ...
+    client: update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+    tighost: head: 
+    tighost: cannot open '/etc/ssl/certs/java/cacerts' for reading
+    tighost: : No such file or directory
+    tighost: Adding debian:QuoVadis_Root_CA_2_G3.pem
+    tighost: Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+    tighost: Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+    tighost: Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+    tighost: Adding debian:Taiwan_GRCA.pem
+    tighost: Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+    tighost: Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+    tighost: Adding debian:SwissSign_Gold_CA_-_G2.pem
+    tighost: Adding debian:CFCA_EV_ROOT.pem
+    tighost: Adding debian:Security_Communication_Root_CA.pem
+    tighost: Adding debian:VeriSign_Universal_Root_Certification_Authority.pem
+    tighost: Adding debian:COMODO_Certification_Authority.pem
+    tighost: Adding debian:COMODO_RSA_Certification_Authority.pem
+    tighost: Adding debian:CA_Disig_Root_R2.pem
+    client: Setting up libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
+    tighost: Adding debian:COMODO_ECC_Certification_Authority.pem
+    client: Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+    tighost: Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+    tighost: Adding debian:Certigna.pem
+    tighost: Adding debian:GeoTrust_Primary_Certification_Authority_-_G2.pem
+    tighost: Adding debian:Comodo_AAA_Services_root.pem
+    tighost: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.pem
+    client: Setting up jq (1.5+dfsg-2) ...
+    tighost: Adding debian:Amazon_Root_CA_2.pem
+    tighost: Adding debian:thawte_Primary_Root_CA_-_G2.pem
+    tighost: Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+    tighost: Adding debian:Certplus_Root_CA_G2.pem
+    tighost: Adding debian:SwissSign_Silver_CA_-_G2.pem
+    tighost: Adding debian:Certplus_Class_2_Primary_CA.pem
+    tighost: Adding debian:Entrust_Root_Certification_Authority.pem
+    tighost: Adding debian:EE_Certification_Centre_Root_CA.pem
+    tighost: Adding debian:DigiCert_Assured_ID_Root_G2.pem
+    tighost: Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+    tighost: Adding debian:AddTrust_External_Root.pem
+    tighost: Adding debian:AffirmTrust_Premium_ECC.pem
+    tighost: Adding debian:Amazon_Root_CA_1.pem
+    tighost: Adding debian:TrustCor_ECA-1.pem
+    tighost: Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+    tighost: Adding debian:OpenTrust_Root_CA_G2.pem
+    tighost: Adding debian:GlobalSign_Root_CA_-_R3.pem
+    client: Setting up fontconfig-config (2.12.6-0ubuntu2) ...
+    tighost: Adding debian:USERTrust_RSA_Certification_Authority.pem
+    tighost: Adding debian:DigiCert_Global_Root_G3.pem
+    tighost: Adding debian:Cybertrust_Global_Root.pem
+    tighost: Adding debian:Hongkong_Post_Root_CA_1.pem
+    tighost: Adding debian:Staat_der_Nederlanden_Root_CA_-_G3.pem
+    tighost: Adding debian:SZAFIR_ROOT_CA2.pem
+    tighost: Adding debian:TrustCor_RootCert_CA-1.pem
+    tighost: Adding debian:Secure_Global_CA.pem
+    tighost: Adding debian:TWCA_Root_Certification_Authority.pem
+    tighost: Adding debian:DigiCert_Global_Root_G2.pem
+    tighost: Adding debian:QuoVadis_Root_CA_2.pem
+    tighost: Adding debian:Deutsche_Telekom_Root_CA_2.pem
+    tighost: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem
+    tighost: Adding debian:AffirmTrust_Networking.pem
+    tighost: Adding debian:GlobalSign_Root_CA.pem
+    tighost: Adding debian:GeoTrust_Universal_CA.pem
+    tighost: Adding debian:USERTrust_ECC_Certification_Authority.pem
+    tighost: Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+    tighost: Adding debian:Certum_Trusted_Network_CA_2.pem
+    tighost: Adding debian:TeliaSonera_Root_CA_v1.pem
+    tighost: Adding debian:TWCA_Global_Root_CA.pem
+    tighost: Adding debian:Baltimore_CyberTrust_Root.pem
+    tighost: Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+    tighost: Adding debian:Buypass_Class_2_Root_CA.pem
+    tighost: Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+    tighost: Adding debian:DigiCert_Assured_ID_Root_CA.pem
+    tighost: Adding debian:OpenTrust_Root_CA_G1.pem
+    tighost: Adding debian:Security_Communication_RootCA2.pem
+    tighost: Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+    tighost: Adding debian:Atos_TrustedRoot_2011.pem
+    tighost: Adding debian:Amazon_Root_CA_3.pem
+    tighost: Adding debian:XRamp_Global_CA_Root.pem
+    tighost: Adding debian:Visa_eCommerce_Root.pem
+    tighost: Adding debian:Amazon_Root_CA_4.pem
+    tighost: Adding debian:Starfield_Class_2_CA.pem
+    tighost: Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+    tighost: Adding debian:Certum_Trusted_Network_CA.pem
+    tighost: Adding debian:thawte_Primary_Root_CA.pem
+    tighost: Adding debian:ACCVRAIZ1.pem
+    tighost: Adding debian:ePKI_Root_Certification_Authority.pem
+    tighost: Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+    tighost: Adding debian:DigiCert_Global_Root_CA.pem
+    tighost: Adding debian:QuoVadis_Root_CA_3_G3.pem
+    tighost: Adding debian:Staat_der_Nederlanden_EV_Root_CA.pem
+    tighost: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
+    tighost: Adding debian:thawte_Primary_Root_CA_-_G3.pem
+    tighost: Adding debian:Chambers_of_Commerce_Root_-_2008.pem
+    tighost: Adding debian:ISRG_Root_X1.pem
+    tighost: Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+    tighost: Adding debian:TÜRKTRUST_Elektronik_Sertifika_Hizmet_Sağlayıcısı_H5.pem
+    tighost: Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+    tighost: Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+    tighost: Adding debian:SecureTrust_CA.pem
+    tighost: Adding debian:OISTE_WISeKey_Global_Root_GA_CA.pem
+    tighost: Adding debian:QuoVadis_Root_CA_1_G3.pem
+    tighost: Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+    tighost: Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+    tighost: Adding debian:certSIGN_ROOT_CA.pem
+    tighost: Adding debian:GeoTrust_Universal_CA_2.pem
+    tighost: Adding debian:TrustCor_RootCert_CA-2.pem
+    tighost: Adding debian:Staat_der_Nederlanden_Root_CA_-_G2.pem
+    tighost: Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+    tighost: Adding debian:Actalis_Authentication_Root_CA.pem
+    tighost: Adding debian:SecureSign_RootCA11.pem
+    tighost: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+    tighost: Adding debian:DigiCert_Trusted_Root_G4.pem
+    tighost: Adding debian:GlobalSign_Root_CA_-_R2.pem
+    tighost: Adding debian:LuxTrust_Global_Root_2.pem
+    tighost: Adding debian:AffirmTrust_Commercial.pem
+    tighost: Adding debian:Global_Chambersign_Root_-_2008.pem
+    tighost: Adding debian:GeoTrust_Global_CA.pem
+    tighost: Adding debian:DigiCert_Assured_ID_Root_G3.pem
+    tighost: Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+    tighost: Adding debian:Network_Solutions_Certificate_Authority.pem
+    tighost: Adding debian:OpenTrust_Root_CA_G3.pem
+    tighost: Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+    tighost: Adding debian:GeoTrust_Primary_Certification_Authority_-_G3.pem
+    tighost: Adding debian:Certplus_Root_CA_G1.pem
+    tighost: Adding debian:Trustis_FPS_Root_CA.pem
+    tighost: Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.pem
+    tighost: Adding debian:EC-ACC.pem
+    tighost: Adding debian:AC_RAIZ_FNMT-RCM.pem
+    tighost: Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+    tighost: Adding debian:DST_Root_CA_X3.pem
+    tighost: Adding debian:QuoVadis_Root_CA_3.pem
+    tighost: Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+    tighost: Adding debian:Sonera_Class_2_Root_CA.pem
+    tighost: Adding debian:AffirmTrust_Premium.pem
+    tighost: Adding debian:E-Tugra_Certification_Authority.pem
+    tighost: Adding debian:GeoTrust_Primary_Certification_Authority.pem
+    tighost: Adding debian:QuoVadis_Root_CA.pem
+    tighost: Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+    tighost: Adding debian:Certinomis_-_Root_CA.pem
+    tighost: Adding debian:Buypass_Class_3_Root_CA.pem
+    tighost: Adding debian:Izenpe.com.pem
+    tighost: Adding debian:Go_Daddy_Class_2_CA.pem
+    client: Setting up libnss3:amd64 (2:3.35-2ubuntu2.3) ...
+    tighost: done.
+    tighost: Processing triggers for mime-support (3.60ubuntu1) ...
+    client: Setting up libxtst6:amd64 (2:1.2.3-1) ...
+    client: Setting up libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
+    tighost: Processing triggers for ureadahead (0.100.0-21) ...
+    client: Setting up libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+    tighost: Processing triggers for libc-bin (2.27-3ubuntu1) ...
+    client: Setting up libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
+    client: Setting up libcups2:amd64 (2.2.7-1ubuntu2.7) ...
+    tighost: Processing triggers for systemd (237-3ubuntu10.31) ...
+    client: Setting up openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
+    tighost: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+    client: update-alternatives: 
+    client: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+    client: update-alternatives: 
+    client: using /usr/lib/jvm/java-11-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+    client: update-alternatives: 
+    client: using /usr/lib/jvm/java-11-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+    client: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+    client: update-alternatives: 
+    client: using /usr/lib/jvm/java-11-openjdk-amd64/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+    client: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+    client: update-alternatives: 
+    client: using /usr/lib/jvm/java-11-openjdk-amd64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+    client: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+    client: Setting up ca-certificates-java (20180516ubuntu1~18.04.1) ...
+    client: head: 
+    client: cannot open '/etc/ssl/certs/java/cacerts' for reading
+    client: : No such file or directory
+    client: Adding debian:QuoVadis_Root_CA_2_G3.pem
+    client: Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+    client: Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+    client: Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+    client: Adding debian:Taiwan_GRCA.pem
+    client: Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+    client: Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+    client: Adding debian:SwissSign_Gold_CA_-_G2.pem
+    client: Adding debian:CFCA_EV_ROOT.pem
+    client: Adding debian:Security_Communication_Root_CA.pem
+    client: Adding debian:VeriSign_Universal_Root_Certification_Authority.pem
+    client: Adding debian:COMODO_Certification_Authority.pem
+    client: Adding debian:COMODO_RSA_Certification_Authority.pem
+    client: Adding debian:CA_Disig_Root_R2.pem
+    client: Adding debian:COMODO_ECC_Certification_Authority.pem
+    client: Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+    client: Adding debian:Certigna.pem
+    client: Adding debian:GeoTrust_Primary_Certification_Authority_-_G2.pem
+    client: Adding debian:Comodo_AAA_Services_root.pem
+    client: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.pem
+    client: Adding debian:Amazon_Root_CA_2.pem
+    client: Adding debian:thawte_Primary_Root_CA_-_G2.pem
+    client: Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+    client: Adding debian:Certplus_Root_CA_G2.pem
+    client: Adding debian:SwissSign_Silver_CA_-_G2.pem
+    client: Adding debian:Certplus_Class_2_Primary_CA.pem
+    client: Adding debian:Entrust_Root_Certification_Authority.pem
+    client: Adding debian:EE_Certification_Centre_Root_CA.pem
+    client: Adding debian:DigiCert_Assured_ID_Root_G2.pem
+    client: Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+    client: Adding debian:AddTrust_External_Root.pem
+    client: Adding debian:AffirmTrust_Premium_ECC.pem
+    client: Adding debian:Amazon_Root_CA_1.pem
+    client: Adding debian:TrustCor_ECA-1.pem
+    client: Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+    client: Adding debian:OpenTrust_Root_CA_G2.pem
+    client: Adding debian:GlobalSign_Root_CA_-_R3.pem
+    client: Adding debian:USERTrust_RSA_Certification_Authority.pem
+    client: Adding debian:DigiCert_Global_Root_G3.pem
+    client: Adding debian:Cybertrust_Global_Root.pem
+    client: Adding debian:Hongkong_Post_Root_CA_1.pem
+    client: Adding debian:Staat_der_Nederlanden_Root_CA_-_G3.pem
+    client: Adding debian:SZAFIR_ROOT_CA2.pem
+    client: Adding debian:TrustCor_RootCert_CA-1.pem
+    client: Adding debian:Secure_Global_CA.pem
+    client: Adding debian:TWCA_Root_Certification_Authority.pem
+    client: Adding debian:DigiCert_Global_Root_G2.pem
+    client: Adding debian:QuoVadis_Root_CA_2.pem
+    client: Adding debian:Deutsche_Telekom_Root_CA_2.pem
+    client: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem
+    client: Adding debian:AffirmTrust_Networking.pem
+    client: Adding debian:GlobalSign_Root_CA.pem
+    client: Adding debian:GeoTrust_Universal_CA.pem
+    client: Adding debian:USERTrust_ECC_Certification_Authority.pem
+    client: Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+    client: Adding debian:Certum_Trusted_Network_CA_2.pem
+    client: Adding debian:TeliaSonera_Root_CA_v1.pem
+    client: Adding debian:TWCA_Global_Root_CA.pem
+    client: Adding debian:Baltimore_CyberTrust_Root.pem
+    client: Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+    client: Adding debian:Buypass_Class_2_Root_CA.pem
+    client: Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+    client: Adding debian:DigiCert_Assured_ID_Root_CA.pem
+    client: Adding debian:OpenTrust_Root_CA_G1.pem
+    client: Adding debian:Security_Communication_RootCA2.pem
+    client: Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+    client: Adding debian:Atos_TrustedRoot_2011.pem
+    client: Adding debian:Amazon_Root_CA_3.pem
+    client: Adding debian:XRamp_Global_CA_Root.pem
+    client: Adding debian:Visa_eCommerce_Root.pem
+    client: Adding debian:Amazon_Root_CA_4.pem
+    client: Adding debian:Starfield_Class_2_CA.pem
+    client: Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+    client: Adding debian:Certum_Trusted_Network_CA.pem
+    client: Adding debian:thawte_Primary_Root_CA.pem
+    client: Adding debian:ACCVRAIZ1.pem
+    client: Adding debian:ePKI_Root_Certification_Authority.pem
+    client: Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+    client: Adding debian:DigiCert_Global_Root_CA.pem
+    client: Adding debian:QuoVadis_Root_CA_3_G3.pem
+    client: Adding debian:Staat_der_Nederlanden_EV_Root_CA.pem
+    client: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
+    client: Adding debian:thawte_Primary_Root_CA_-_G3.pem
+    client: Adding debian:Chambers_of_Commerce_Root_-_2008.pem
+    client: Adding debian:ISRG_Root_X1.pem
+    client: Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+    client: Adding debian:TÜRKTRUST_Elektronik_Sertifika_Hizmet_Sağlayıcısı_H5.pem
+    client: Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+    client: Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+    client: Adding debian:SecureTrust_CA.pem
+    client: Adding debian:OISTE_WISeKey_Global_Root_GA_CA.pem
+    client: Adding debian:QuoVadis_Root_CA_1_G3.pem
+    client: Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+    client: Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+    client: Adding debian:certSIGN_ROOT_CA.pem
+    client: Adding debian:GeoTrust_Universal_CA_2.pem
+    client: Adding debian:TrustCor_RootCert_CA-2.pem
+    client: Adding debian:Staat_der_Nederlanden_Root_CA_-_G2.pem
+    client: Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+    client: Adding debian:Actalis_Authentication_Root_CA.pem
+    client: Adding debian:SecureSign_RootCA11.pem
+    client: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+    client: Adding debian:DigiCert_Trusted_Root_G4.pem
+    client: Adding debian:GlobalSign_Root_CA_-_R2.pem
+    client: Adding debian:LuxTrust_Global_Root_2.pem
+    client: Adding debian:AffirmTrust_Commercial.pem
+    client: Adding debian:Global_Chambersign_Root_-_2008.pem
+    client: Adding debian:GeoTrust_Global_CA.pem
+    client: Adding debian:DigiCert_Assured_ID_Root_G3.pem
+    client: Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+    client: Adding debian:Network_Solutions_Certificate_Authority.pem
+    client: Adding debian:OpenTrust_Root_CA_G3.pem
+    client: Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+    client: Adding debian:GeoTrust_Primary_Certification_Authority_-_G3.pem
+    client: Adding debian:Certplus_Root_CA_G1.pem
+    client: Adding debian:Trustis_FPS_Root_CA.pem
+    client: Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.pem
+    client: Adding debian:EC-ACC.pem
+    client: Adding debian:AC_RAIZ_FNMT-RCM.pem
+    client: Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+    client: Adding debian:DST_Root_CA_X3.pem
+    client: Adding debian:QuoVadis_Root_CA_3.pem
+    client: Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+    client: Adding debian:Sonera_Class_2_Root_CA.pem
+    client: Adding debian:AffirmTrust_Premium.pem
+    client: Adding debian:E-Tugra_Certification_Authority.pem
+    client: Adding debian:GeoTrust_Primary_Certification_Authority.pem
+    client: Adding debian:QuoVadis_Root_CA.pem
+    client: Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+    client: Adding debian:Certinomis_-_Root_CA.pem
+    client: Adding debian:Buypass_Class_3_Root_CA.pem
+    client: Adding debian:Izenpe.com.pem
+    client: Adding debian:Go_Daddy_Class_2_CA.pem
+    client: done.
+    client: Processing triggers for mime-support (3.60ubuntu1) ...
+    client: Processing triggers for ureadahead (0.100.0-21) ...
+    client: Processing triggers for libc-bin (2.27-3ubuntu1) ...
+    client: Processing triggers for systemd (237-3ubuntu10.31) ...
+    client: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+    tighost: Processing triggers for ca-certificates (20180409) ...
+    tighost: Updating certificates in /etc/ssl/certs...
+    tighost: 0 added, 0 removed; done.
+    tighost: Running hooks in /etc/ca-certificates/update.d...
+    tighost: done.
+    tighost: done.
+    client: Processing triggers for ca-certificates (20180409) ...
+    client: Updating certificates in /etc/ssl/certs...
+    client: 0 added, 0 removed; done.
+    client: 
+    client: Running hooks in /etc/ca-certificates/update.d...
+    client: done.
+    client: done.
+    tighost: Warning: apt-key output should not be parsed (stdout is not a terminal)
+    tighost: OK
+    tighost: deb https://repos.influxdata.com/ubuntu bionic stable
+    tighost: Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    tighost: Hit:2 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    tighost: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    tighost: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    tighost: Get:5 https://repos.influxdata.com/ubuntu bionic InRelease [4,731 B]
+    tighost: Get:6 https://repos.influxdata.com/ubuntu bionic/stable i386 Packages [922 B]
+    tighost: Get:7 https://repos.influxdata.com/ubuntu bionic/stable amd64 Packages [924 B]
+    tighost: Fetched 6,577 B in 1s (6,663 B/s)
+    tighost: Reading package lists...
+    client: Warning: apt-key output should not be parsed (stdout is not a terminal)
+    client: OK
+    client: deb https://repos.influxdata.com/ubuntu bionic stable
+    client: Get:1 https://repos.influxdata.com/ubuntu bionic InRelease [4,731 B]
+    client: Hit:2 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    client: Get:3 https://repos.influxdata.com/ubuntu bionic/stable i386 Packages [922 B]
+    client: Get:4 https://repos.influxdata.com/ubuntu bionic/stable amd64 Packages [924 B]
+    tighost: Reading package lists...
+    tighost: Building dependency tree...
+    client: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    client: Hit:6 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    tighost: Reading state information...
+    client: Hit:7 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    tighost: The following NEW packages will be installed:
+    tighost:   influxdb
+    client: Fetched 6,577 B in 2s (3,503 B/s)
+    client: Reading package lists...
+    tighost: 0 upgraded, 1 newly installed, 0 to remove and 36 not upgraded.
+    tighost: Need to get 63.5 MB of archives.
+    tighost: After this operation, 178 MB of additional disk space will be used.
+    tighost: Get:1 https://repos.influxdata.com/ubuntu bionic/stable amd64 influxdb amd64 1.7.9-1 [63.5 MB]
+    client: Reading package lists...
+    client: Building dependency tree...
+    tighost: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    tighost: Fetched 63.5 MB in 2s (27.3 MB/s)
+    client: Reading state information...
+    tighost: Selecting previously unselected package influxdb.
+    tighost: (Reading database ... 
+    tighost: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+    tighost: (Reading database ... 60%
+    tighost: (Reading database ... 65%
+    tighost: (Reading database ... 70%
+    tighost: (Reading database ... 75%
+    tighost: (Reading database ... 80%
+    tighost: (Reading database ... 85%
+    tighost: (Reading database ... 90%
+    tighost: (Reading database ... 95%
+    tighost: (Reading database ... 100%(Reading database ... 106877 files and directories currently installed.)
+    tighost: Preparing to unpack .../influxdb_1.7.9-1_amd64.deb ...
+    tighost: Unpacking influxdb (1.7.9-1) ...
+    client: The following NEW packages will be installed:
+    client:   telegraf
+    client: 0 upgraded, 1 newly installed, 0 to remove and 36 not upgraded.
+    client: Need to get 21.0 MB of archives.
+    client: After this operation, 72.2 MB of additional disk space will be used.
+    client: Get:1 https://repos.influxdata.com/ubuntu bionic/stable amd64 telegraf amd64 1.12.5-1 [21.0 MB]
+    client: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    client: Fetched 21.0 MB in 1s (22.7 MB/s)
+    client: Selecting previously unselected package telegraf.
+    client: (Reading database ... 
+    client: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+    client: (Reading database ... 60%
+    client: (Reading database ... 65%
+    client: (Reading database ... 70%
+    client: (Reading database ... 75%
+    client: (Reading database ... 80%
+    client: (Reading database ... 85%
+    client: (Reading database ... 90%
+    client: (Reading database ... 95%
+    client: (Reading database ... 100%(Reading database ... 106877 files and directories currently installed.)
+    client: Preparing to unpack .../telegraf_1.12.5-1_amd64.deb ...
+    tighost: Setting up influxdb (1.7.9-1) ...
+    client: Unpacking telegraf (1.12.5-1) ...
+    tighost: Created symlink /etc/systemd/system/influxd.service → /lib/systemd/system/influxdb.service.
+    tighost: Created symlink /etc/systemd/system/multi-user.target.wants/influxdb.service → /lib/systemd/system/influxdb.service.
+    tighost: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+    client: Setting up telegraf (1.12.5-1) ...
+    client: Created symlink /etc/systemd/system/multi-user.target.wants/telegraf.service → /lib/systemd/system/telegraf.service.
+    tighost: Reading package lists...
+    tighost: Building dependency tree...
+    tighost: Reading state information...
+    tighost: The following NEW packages will be installed:
+    tighost:   telegraf
+    tighost: 0 upgraded, 1 newly installed, 0 to remove and 36 not upgraded.
+    tighost: Need to get 21.0 MB of archives.
+    tighost: After this operation, 72.2 MB of additional disk space will be used.
+    tighost: Get:1 https://repos.influxdata.com/ubuntu bionic/stable amd64 telegraf amd64 1.12.5-1 [21.0 MB]
+    tighost: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    tighost: Fetched 21.0 MB in 1s (20.3 MB/s)
+    tighost: Selecting previously unselected package telegraf.
+    tighost: (Reading database ... 
+    tighost: (Reading database ... 5%
+    tighost: (Reading database ... 10%
+    tighost: (Reading database ... 15%
+    tighost: (Reading database ... 20%
+    tighost: (Reading database ... 25%
+    tighost: (Reading database ... 30%
+    tighost: (Reading database ... 35%
+    tighost: (Reading database ... 40%
+    tighost: (Reading database ... 45%
+    tighost: (Reading database ... 50%
+    tighost: (Reading database ... 55%
+    tighost: (Reading database ... 60%
+    tighost: (Reading database ... 65%
+    tighost: (Reading database ... 70%
+    tighost: (Reading database ... 75%
+    tighost: (Reading database ... 80%
+    tighost: (Reading database ... 85%
+    tighost: (Reading database ... 90%
+    tighost: (Reading database ... 95%
+    tighost: (Reading database ... 100%
+    tighost: (Reading database ... 
+    tighost: 106903 files and directories currently installed.)
+    tighost: Preparing to unpack .../telegraf_1.12.5-1_amd64.deb ...
+    tighost: Unpacking telegraf (1.12.5-1) ...
+    tighost: Setting up telegraf (1.12.5-1) ...
+    tighost: Created symlink /etc/systemd/system/multi-user.target.wants/telegraf.service → /lib/systemd/system/telegraf.service.
+    tighost: Warning: apt-key output should not be parsed (stdout is not a terminal)
+    tighost: OK
+    tighost: Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    tighost: Hit:2 https://repos.influxdata.com/ubuntu bionic InRelease
+    tighost: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    tighost: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    tighost: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    tighost: Get:6 https://packages.grafana.com/oss/deb stable InRelease [12.1 kB]
+    tighost: Get:7 https://packages.grafana.com/oss/deb stable/main amd64 Packages [13.8 kB]
+    tighost: Fetched 25.9 kB in 1s (23.1 kB/s)
+    tighost: Reading package lists...
+    tighost: WARNING: 
+    tighost: apt
+    tighost:  
+    tighost: does not have a stable CLI interface. 
+    tighost: Use with caution in scripts.
+    tighost: Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    tighost: Hit:2 https://repos.influxdata.com/ubuntu bionic InRelease
+    tighost: Hit:3 https://packages.grafana.com/oss/deb stable InRelease
+    tighost: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    tighost: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    tighost: Hit:6 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    tighost: Reading package lists...
+    tighost: Building dependency tree...
+    tighost: Reading state information...
+    tighost: 36 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    tighost: WARNING: 
+    tighost: apt
+    tighost:  
+    tighost: does not have a stable CLI interface. 
+    tighost: Use with caution in scripts.
+    tighost: Reading package lists...
+    tighost: Building dependency tree...
+    tighost: Reading state information...
+    tighost: The following NEW packages will be installed:
+    tighost:   grafana
+    tighost: 0 upgraded, 1 newly installed, 0 to remove and 36 not upgraded.
+    tighost: Need to get 59.9 MB of archives.
+    tighost: After this operation, 172 MB of additional disk space will be used.
+    tighost: Get:1 https://packages.grafana.com/oss/deb stable/main amd64 grafana amd64 6.4.4 [59.9 MB]
+    tighost: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    tighost: Fetched 59.9 MB in 2s (26.4 MB/s)
+    tighost: Selecting previously unselected package grafana.
+    tighost: (Reading database ... 
+    tighost: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+    tighost: (Reading database ... 60%
+    tighost: (Reading database ... 65%
+    tighost: (Reading database ... 70%
+    tighost: (Reading database ... 75%
+    tighost: (Reading database ... 80%
+    tighost: (Reading database ... 85%
+    tighost: (Reading database ... 90%
+    tighost: (Reading database ... 95%
+    tighost: (Reading database ... 100%(Reading database ... 106915 files and directories currently installed.)
+    tighost: Preparing to unpack .../grafana_6.4.4_amd64.deb ...
+    tighost: Unpacking grafana (6.4.4) ...
+    tighost: Setting up grafana (6.4.4) ...
+    tighost: Adding system user `grafana' (UID 112) ...
+    tighost: Adding new user `grafana' (UID 112) with group `grafana' ...
+    tighost: Not creating home directory `/usr/share/grafana'.
+    tighost: ### NOT starting on installation, please execute the following statements to configure grafana to start automatically using systemd
+    tighost:  sudo /bin/systemctl daemon-reload
+    tighost:  sudo /bin/systemctl enable grafana-server
+    tighost: ### You can start grafana-server by executing
+    tighost:  sudo /bin/systemctl start grafana-server
+    tighost: Processing triggers for systemd (237-3ubuntu10.31) ...
+    tighost: Processing triggers for ureadahead (0.100.0-21) ...
+    tighost: Synchronizing state of grafana-server.service with SysV service script with /lib/systemd/systemd-sysv-install.
+    tighost: Executing: /lib/systemd/systemd-sysv-install enable grafana-server
+    tighost: Created symlink /etc/systemd/system/multi-user.target.wants/grafana-server.service → /usr/lib/systemd/system/grafana-server.service.
+[1G   Test Suite for InfluxDB[K[185G1/2[2G[1G ✓ Test Suite for InfluxDB[K
+[0m[1G   Check Grafana[K[185G2/2[2G[1G ✓ Check Grafana[K
 [0m
 2 tests, 0 failures
-Connection to 192.168.121.93 closed.
-STOP:  Thu 14 Nov 15:45:28 GMT 2019
+Connection to 192.168.121.197 closed.
+STOP:  Thu 14 Nov 18:56:48 GMT 2019

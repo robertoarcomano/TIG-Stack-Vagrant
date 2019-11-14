@@ -3,7 +3,7 @@ source /vagrant/params.sh
 
 @test "Test Suite for InfluxDB" {
   # 1. Create file with records
-  /vagrant/create_data.sh $N $DATABASE > $IMPORT_PATH
+  /vagrant/create_data.sh > $IMPORT_PATH
   # 2. Insert records
   influx -import -path=$IMPORT_PATH
   # 3. Test records count
