@@ -1,4 +1,4 @@
-awk -v N=$1 -v DATABASE=$2 '
+awk -v N=$N -v DATABASE=$DATABASE -v USERNAME=$USERNAME -v PASSWORD=$PASSWORD '
 function random(width,start) {
   return sprintf("%.2d",rand()*width+start)
 }
@@ -6,6 +6,7 @@ function random(width,start) {
 BEGIN {
  srand();
  print "CREATE DATABASE "DATABASE
+ print "CREATE USER " USERNAME " WITH PASSWORD \x27"PASSWORD"\x27"
  print "# DML"
  print "# CONTEXT-DATABASE: "DATABASE
  for (i=0; i<int(N); i++) {

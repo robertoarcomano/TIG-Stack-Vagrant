@@ -1,13 +1,14 @@
-CREATE DATABASE temperature_db
+CREATE DATABASE telegraf
+CREATE USER telegraf WITH PASSWORD 'password'
 # DML
-# CONTEXT-DATABASE: temperature_db
-temperature,sensor_id=10 temperature=22 1563689446529
-temperature,sensor_id=09 temperature=21 1549193477617
-temperature,sensor_id=05 temperature=55 1572263790059
-temperature,sensor_id=02 temperature=63 1557299000540
-temperature,sensor_id=05 temperature=31 1549591610273
-temperature,sensor_id=03 temperature=27 1562781139539
-temperature,sensor_id=09 temperature=67 1571803443601
-temperature,sensor_id=08 temperature=54 1563824617224
-temperature,sensor_id=09 temperature=43 1563675796677
-temperature,sensor_id=03 temperature=38 1552621873026
+# CONTEXT-DATABASE: telegraf
+temperature,sensor_id=02 temperature=29 1559022953457
+temperature,sensor_id=04 temperature=54 1553378484088
+temperature,sensor_id=09 temperature=52 1563517144175
+temperature,sensor_id=10 temperature=33 1565657659134
+temperature,sensor_id=02 temperature=72 1553104141705
+temperature,sensor_id=02 temperature=61 1571028404518
+temperature,sensor_id=08 temperature=72 1560192650487
+temperature,sensor_id=05 temperature=60 1574865838993
+temperature,sensor_id=06 temperature=22 1551219350212
+temperature,sensor_id=10 temperature=46 1547663248409
