@@ -1,4 +1,4 @@
-START:  Wed 13 Nov 21:55:42 GMT 2019
+START:  Thu 14 Nov 15:41:07 GMT 2019
 ==> default: Removing domain...
 Bringing machine 'default' up with 'libvirt' provider...
 ==> default: Checking if box 'generic/ubuntu1804' version '1.9.38' is up to date...
@@ -42,15 +42,17 @@ Bringing machine 'default' up with 'libvirt' provider...
     default: Inserting generated public key within guest...
     default: Removing insecure key from the guest if it's present...
     default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Setting hostname...
 ==> default: Configuring and enabling network interfaces...
 ==> default: Installing NFS client...
 ==> default: Exporting NFS shared folders...
 ==> default: Preparing to edit /etc/exports. Administrator privileges will be required...
 ==> default: Mounting NFS shared folders...
 ==> default: Running provisioner: shell...
-    default: Running: /tmp/vagrant-shell20191113-240042-13derrr.sh
+    default: Running: /tmp/vagrant-shell20191114-377711-8b94c3.sh
     default: Reading package lists...
     default: Building dependency tree...
+    default: 
     default: Reading state information...
     default: The following additional packages will be installed:
     default:   ca-certificates-java fontconfig-config fonts-dejavu-core java-common
@@ -71,7 +73,7 @@ Bringing machine 'default' up with 'libvirt' provider...
     default:   libavahi-common-data libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8
     default:   libjpeg8 libjq1 liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1
     default:   libxi6 libxrender1 libxtst6 mc mc-data openjdk-11-jre-headless x11-common
-    default: 0 upgraded, 30 newly installed, 0 to remove and 35 not upgraded.
+    default: 0 upgraded, 30 newly installed, 0 to remove and 36 not upgraded.
     default: Need to get 43.0 MB of archives.
     default: After this operation, 192 MB of additional disk space will be used.
     default: Get:1 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libjpeg-turbo8 amd64 1.5.2-0ubuntu5.18.04.3 [110 kB]
@@ -105,12 +107,11 @@ Bringing machine 'default' up with 'libvirt' provider...
     default: Get:29 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc-data all 3:4.8.19-1 [1,238 kB]
     default: Get:30 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc amd64 3:4.8.19-1 [474 kB]
     default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
-    default: Fetched 43.0 MB in 18s (2,414 kB/s)
+    default: Fetched 43.0 MB in 18s (2,399 kB/s)
     default: Selecting previously unselected package libjpeg-turbo8:amd64.
     default: (Reading database ... 
-    default: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%
-    default: (Reading database ... 35%(Reading database ... 40%
-    default: (Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+    default: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%
+    default: (Reading database ... 55%
     default: (Reading database ... 60%
     default: (Reading database ... 65%
     default: (Reading database ... 70%
@@ -250,7 +251,8 @@ Bringing machine 'default' up with 'libvirt' provider...
     default: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
     default: update-alternatives: 
     default: using /usr/lib/jvm/java-11-openjdk-amd64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
-    default: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+    default: update-alternatives: 
+    default: using /usr/lib/jvm/java-11-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
     default: Setting up ca-certificates-java (20180516ubuntu1~18.04.1) ...
     default: head: cannot open '/etc/ssl/certs/java/cacerts' for reading: No such file or directory
     default: Adding debian:QuoVadis_Root_CA_2_G3.pem
@@ -401,14 +403,14 @@ Bringing machine 'default' up with 'libvirt' provider...
     default: Warning: apt-key output should not be parsed (stdout is not a terminal)
     default: OK
     default: deb https://repos.influxdata.com/ubuntu bionic stable
-    default: Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
-    default: Hit:2 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    default: Hit:1 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    default: Hit:2 http://security.ubuntu.com/ubuntu bionic-security InRelease
     default: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
     default: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
     default: Get:5 https://repos.influxdata.com/ubuntu bionic InRelease [4,731 B]
-    default: Get:6 https://repos.influxdata.com/ubuntu bionic/stable amd64 Packages [924 B]
-    default: Get:7 https://repos.influxdata.com/ubuntu bionic/stable i386 Packages [922 B]
-    default: Fetched 6,577 B in 1s (5,913 B/s)
+    default: Get:6 https://repos.influxdata.com/ubuntu bionic/stable i386 Packages [922 B]
+    default: Get:7 https://repos.influxdata.com/ubuntu bionic/stable amd64 Packages [924 B]
+    default: Fetched 6,577 B in 1s (6,823 B/s)
     default: Reading package lists...
     default: Reading package lists...
     default: Building dependency tree...
@@ -416,12 +418,12 @@ Bringing machine 'default' up with 'libvirt' provider...
     default: Reading state information...
     default: The following NEW packages will be installed:
     default:   influxdb
-    default: 0 upgraded, 1 newly installed, 0 to remove and 35 not upgraded.
+    default: 0 upgraded, 1 newly installed, 0 to remove and 36 not upgraded.
     default: Need to get 63.5 MB of archives.
     default: After this operation, 178 MB of additional disk space will be used.
     default: Get:1 https://repos.influxdata.com/ubuntu bionic/stable amd64 influxdb amd64 1.7.9-1 [63.5 MB]
     default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
-    default: Fetched 63.5 MB in 3s (20.5 MB/s)
+    default: Fetched 63.5 MB in 2s (26.3 MB/s)
     default: Selecting previously unselected package influxdb.
     default: (Reading database ... 
     default: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
@@ -440,9 +442,103 @@ Bringing machine 'default' up with 'libvirt' provider...
     default: Created symlink /etc/systemd/system/influxd.service → /lib/systemd/system/influxdb.service.
     default: Created symlink /etc/systemd/system/multi-user.target.wants/influxdb.service → /lib/systemd/system/influxdb.service.
     default: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
-[1G   Insert Records and Check Number[K[149G1/2[2G[1G ✓ Insert Records and Check Number[K
-[0m[1G   Check Items Count After API call[K[149G2/2[2G[1G ✓ Check Items Count After API call[K
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: Reading state information...
+    default: The following NEW packages will be installed:
+    default:   telegraf
+    default: 0 upgraded, 1 newly installed, 0 to remove and 36 not upgraded.
+    default: Need to get 21.0 MB of archives.
+    default: After this operation, 72.2 MB of additional disk space will be used.
+    default: Get:1 https://repos.influxdata.com/ubuntu bionic/stable amd64 telegraf amd64 1.12.5-1 [21.0 MB]
+    default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    default: Fetched 21.0 MB in 1s (22.6 MB/s)
+    default: Selecting previously unselected package telegraf.
+    default: (Reading database ... 
+    default: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%(Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%(Reading database ... 106903 files and directories currently installed.)
+    default: Preparing to unpack .../telegraf_1.12.5-1_amd64.deb ...
+    default: Unpacking telegraf (1.12.5-1) ...
+    default: Setting up telegraf (1.12.5-1) ...
+    default: Created symlink /etc/systemd/system/multi-user.target.wants/telegraf.service → /lib/systemd/system/telegraf.service.
+    default: Warning: apt-key output should not be parsed (stdout is not a terminal)
+    default: OK
+    default: Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    default: Hit:2 https://repos.influxdata.com/ubuntu bionic InRelease
+    default: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    default: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    default: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    default: Get:6 https://packages.grafana.com/oss/deb stable InRelease [12.1 kB]
+    default: Get:7 https://packages.grafana.com/oss/deb stable/main amd64 Packages [13.8 kB]
+    default: Fetched 25.9 kB in 1s (26.2 kB/s)
+    default: Reading package lists...
+    default: 
+    default: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    default: Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    default: Hit:2 https://packages.grafana.com/oss/deb stable InRelease
+    default: Hit:3 https://repos.influxdata.com/ubuntu bionic InRelease
+    default: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    default: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    default: Hit:6 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: 
+    default: Reading state information...
+    default: 36 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    default: WARNING: 
+    default: apt
+    default:  
+    default: does not have a stable CLI interface. 
+    default: Use with caution in scripts.
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: Reading state information...
+    default: The following NEW packages will be installed:
+    default:   grafana
+    default: 0 upgraded, 1 newly installed, 0 to remove and 36 not upgraded.
+    default: Need to get 59.9 MB of archives.
+    default: After this operation, 172 MB of additional disk space will be used.
+    default: Get:1 https://packages.grafana.com/oss/deb stable/main amd64 grafana amd64 6.4.4 [59.9 MB]
+    default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    default: Fetched 59.9 MB in 2s (26.5 MB/s)
+    default: Selecting previously unselected package grafana.
+    default: (Reading database ... 
+    default: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%(Reading database ... 106915 files and directories currently installed.)
+    default: Preparing to unpack .../grafana_6.4.4_amd64.deb ...
+    default: Unpacking grafana (6.4.4) ...
+    default: Setting up grafana (6.4.4) ...
+    default: Adding system user `grafana' (UID 112) ...
+    default: Adding new user `grafana' (UID 112) with group `grafana' ...
+    default: Not creating home directory `/usr/share/grafana'.
+    default: ### NOT starting on installation, please execute the following statements to configure grafana to start automatically using systemd
+    default:  sudo /bin/systemctl daemon-reload
+    default:  sudo /bin/systemctl enable grafana-server
+    default: ### You can start grafana-server by executing
+    default:  sudo /bin/systemctl start grafana-server
+    default: Processing triggers for systemd (237-3ubuntu10.31) ...
+    default: Processing triggers for ureadahead (0.100.0-21) ...
+    default: Synchronizing state of grafana-server.service with SysV service script with /lib/systemd/systemd-sysv-install.
+    default: Executing: /lib/systemd/systemd-sysv-install enable grafana-server
+    default: Created symlink /etc/systemd/system/multi-user.target.wants/grafana-server.service → /usr/lib/systemd/system/grafana-server.service.
+[1G   Test Suite for InfluxDB[K[149G1/2[2G[1G ✓ Test Suite for InfluxDB[K
+[0m[1G   Check Grafana[K[149G2/2[2G[1G ✓ Check Grafana[K
 [0m
 2 tests, 0 failures
-Connection to 192.168.121.28 closed.
-STOP:  Wed 13 Nov 21:59:20 GMT 2019
+Connection to 192.168.121.93 closed.
+STOP:  Thu 14 Nov 15:45:28 GMT 2019
