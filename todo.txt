@@ -1,0 +1,14 @@
+1. Download and install Chronograf
+wget https://dl.influxdata.com/chronograf/releases/chronograf_1.7.14_amd64.deb
+sudo dpkg -i chronograf_1.7.14_amd64.deb
+
+2. Input exec plugin
+2.1. Script
+#!/bin/sh
+echo 'example,tag1=a,tag2=b i=42i,j=43i,k=44i'
+
+2.2. Create conf file 
+[[inputs.exec]]
+  commands = ["sh /tmp/test.sh"]
+  timeout = "5s"
+  data_format = "influx"

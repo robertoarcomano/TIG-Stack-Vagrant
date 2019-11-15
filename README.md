@@ -24,3 +24,4 @@ How to create a TIG (Telegraf, InfluxDB,Grafana) Stack using Vagrant
 ## 6. <a href=create_data.sh>Script</a> to create <a href=import>import</a> file for InfluxDB
 ## 7. <a href=params.sh>Params</a> to customize the installation
 ## 8. Grafana screeshot <img src=grafana.png>
+## 9. More on <a href=todo.txt>todo.txt</a> 
